@@ -645,6 +645,66 @@ namespace QuanLiThueXe.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CHITIETXE2", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class CHITIETXE2 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenBangSoField;
+        
+        private int MaXeField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string TenBangSo {
+            get {
+                return this.TenBangSoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenBangSoField, value) != true)) {
+                    this.TenBangSoField = value;
+                    this.RaisePropertyChanged("TenBangSo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
+        public int MaXe {
+            get {
+                return this.MaXeField;
+            }
+            set {
+                if ((this.MaXeField.Equals(value) != true)) {
+                    this.MaXeField = value;
+                    this.RaisePropertyChanged("MaXe");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="HOPDONGDATTRUOC", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     public partial class HOPDONGDATTRUOC : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -1381,6 +1441,33 @@ namespace QuanLiThueXe.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachHangXe", ReplyAction="*")]
         System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachHangXeResponse> DanhSachHangXeAsync(QuanLiThueXe.ServiceReference1.DanhSachHangXeRequest request);
         
+        // CODEGEN: Generating message contract since element name DanhSachAllXeResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachAllXe", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse DanhSachAllXe(QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachAllXe", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse> DanhSachAllXeAsync(QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest request);
+        
+        // CODEGEN: Generating message contract since element name file from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UploadHinhAnh", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.UploadHinhAnhResponse UploadHinhAnh(QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UploadHinhAnh", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.UploadHinhAnhResponse> UploadHinhAnhAsync(QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UploadXeAnh", ReplyAction="*")]
+        void UploadXeAnh(int maxe, int idanh);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UploadXeAnh", ReplyAction="*")]
+        System.Threading.Tasks.Task UploadXeAnhAsync(int maxe, int idanh);
+        
+        // CODEGEN: Generating message contract since element name trangthai from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ThemDatXe", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.ThemDatXeResponse ThemDatXe(QuanLiThueXe.ServiceReference1.ThemDatXeRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ThemDatXe", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ThemDatXeResponse> ThemDatXeAsync(QuanLiThueXe.ServiceReference1.ThemDatXeRequest request);
+        
         // CODEGEN: Generating message contract since element name DanhSachHopDongDatTruocResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachHopDongDatTruoc", ReplyAction="*")]
         QuanLiThueXe.ServiceReference1.DanhSachHopDongDatTruocResponse DanhSachHopDongDatTruoc(QuanLiThueXe.ServiceReference1.DanhSachHopDongDatTruocRequest request);
@@ -2033,6 +2120,209 @@ namespace QuanLiThueXe.ServiceReference1 {
         
         public DanhSachHangXeResponseBody(QuanLiThueXe.ServiceReference1.NHACUNGCAP[] DanhSachHangXeResult) {
             this.DanhSachHangXeResult = DanhSachHangXeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachAllXeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachAllXe", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachAllXeRequestBody Body;
+        
+        public DanhSachAllXeRequest() {
+        }
+        
+        public DanhSachAllXeRequest(QuanLiThueXe.ServiceReference1.DanhSachAllXeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class DanhSachAllXeRequestBody {
+        
+        public DanhSachAllXeRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachAllXeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachAllXeResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachAllXeResponseBody Body;
+        
+        public DanhSachAllXeResponse() {
+        }
+        
+        public DanhSachAllXeResponse(QuanLiThueXe.ServiceReference1.DanhSachAllXeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DanhSachAllXeResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE2[] DanhSachAllXeResult;
+        
+        public DanhSachAllXeResponseBody() {
+        }
+        
+        public DanhSachAllXeResponseBody(QuanLiThueXe.ServiceReference1.CHITIETXE2[] DanhSachAllXeResult) {
+            this.DanhSachAllXeResult = DanhSachAllXeResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UploadHinhAnhRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UploadHinhAnh", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.UploadHinhAnhRequestBody Body;
+        
+        public UploadHinhAnhRequest() {
+        }
+        
+        public UploadHinhAnhRequest(QuanLiThueXe.ServiceReference1.UploadHinhAnhRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class UploadHinhAnhRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public string file;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+        public string name;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+        public int maxe;
+        
+        public UploadHinhAnhRequestBody() {
+        }
+        
+        public UploadHinhAnhRequestBody(string file, string name, int maxe) {
+            this.file = file;
+            this.name = name;
+            this.maxe = maxe;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class UploadHinhAnhResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="UploadHinhAnhResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.UploadHinhAnhResponseBody Body;
+        
+        public UploadHinhAnhResponse() {
+        }
+        
+        public UploadHinhAnhResponse(QuanLiThueXe.ServiceReference1.UploadHinhAnhResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class UploadHinhAnhResponseBody {
+        
+        public UploadHinhAnhResponseBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ThemDatXeRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemDatXe", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.ThemDatXeRequestBody Body;
+        
+        public ThemDatXeRequest() {
+        }
+        
+        public ThemDatXeRequest(QuanLiThueXe.ServiceReference1.ThemDatXeRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class ThemDatXeRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int maxe;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+        public System.DateTime ngaydat;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
+        public string trangthai;
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=3)]
+        public int makh;
+        
+        public ThemDatXeRequestBody() {
+        }
+        
+        public ThemDatXeRequestBody(int maxe, System.DateTime ngaydat, string trangthai, int makh) {
+            this.maxe = maxe;
+            this.ngaydat = ngaydat;
+            this.trangthai = trangthai;
+            this.makh = makh;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class ThemDatXeResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ThemDatXeResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.ThemDatXeResponseBody Body;
+        
+        public ThemDatXeResponse() {
+        }
+        
+        public ThemDatXeResponse(QuanLiThueXe.ServiceReference1.ThemDatXeResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class ThemDatXeResponseBody {
+        
+        public ThemDatXeResponseBody() {
         }
     }
     
@@ -2839,6 +3129,95 @@ namespace QuanLiThueXe.ServiceReference1 {
             QuanLiThueXe.ServiceReference1.DanhSachHangXeRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachHangXeRequest();
             inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachHangXeRequestBody();
             return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachHangXeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachAllXe(QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest request) {
+            return base.Channel.DanhSachAllXe(request);
+        }
+        
+        public QuanLiThueXe.ServiceReference1.CHITIETXE2[] DanhSachAllXe() {
+            QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachAllXeRequestBody();
+            QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachAllXe(inValue);
+            return retVal.Body.DanhSachAllXeResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachAllXeAsync(QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest request) {
+            return base.Channel.DanhSachAllXeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse> DanhSachAllXeAsync() {
+            QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachAllXeRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachAllXeRequestBody();
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachAllXeAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        QuanLiThueXe.ServiceReference1.UploadHinhAnhResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.UploadHinhAnh(QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest request) {
+            return base.Channel.UploadHinhAnh(request);
+        }
+        
+        public void UploadHinhAnh(string file, string name, int maxe) {
+            QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest inValue = new QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.UploadHinhAnhRequestBody();
+            inValue.Body.file = file;
+            inValue.Body.name = name;
+            inValue.Body.maxe = maxe;
+            QuanLiThueXe.ServiceReference1.UploadHinhAnhResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).UploadHinhAnh(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.UploadHinhAnhResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.UploadHinhAnhAsync(QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest request) {
+            return base.Channel.UploadHinhAnhAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.UploadHinhAnhResponse> UploadHinhAnhAsync(string file, string name, int maxe) {
+            QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest inValue = new QuanLiThueXe.ServiceReference1.UploadHinhAnhRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.UploadHinhAnhRequestBody();
+            inValue.Body.file = file;
+            inValue.Body.name = name;
+            inValue.Body.maxe = maxe;
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).UploadHinhAnhAsync(inValue);
+        }
+        
+        public void UploadXeAnh(int maxe, int idanh) {
+            base.Channel.UploadXeAnh(maxe, idanh);
+        }
+        
+        public System.Threading.Tasks.Task UploadXeAnhAsync(int maxe, int idanh) {
+            return base.Channel.UploadXeAnhAsync(maxe, idanh);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        QuanLiThueXe.ServiceReference1.ThemDatXeResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.ThemDatXe(QuanLiThueXe.ServiceReference1.ThemDatXeRequest request) {
+            return base.Channel.ThemDatXe(request);
+        }
+        
+        public void ThemDatXe(int maxe, System.DateTime ngaydat, string trangthai, int makh) {
+            QuanLiThueXe.ServiceReference1.ThemDatXeRequest inValue = new QuanLiThueXe.ServiceReference1.ThemDatXeRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.ThemDatXeRequestBody();
+            inValue.Body.maxe = maxe;
+            inValue.Body.ngaydat = ngaydat;
+            inValue.Body.trangthai = trangthai;
+            inValue.Body.makh = makh;
+            QuanLiThueXe.ServiceReference1.ThemDatXeResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ThemDatXe(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ThemDatXeResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.ThemDatXeAsync(QuanLiThueXe.ServiceReference1.ThemDatXeRequest request) {
+            return base.Channel.ThemDatXeAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ThemDatXeResponse> ThemDatXeAsync(int maxe, System.DateTime ngaydat, string trangthai, int makh) {
+            QuanLiThueXe.ServiceReference1.ThemDatXeRequest inValue = new QuanLiThueXe.ServiceReference1.ThemDatXeRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.ThemDatXeRequestBody();
+            inValue.Body.maxe = maxe;
+            inValue.Body.ngaydat = ngaydat;
+            inValue.Body.trangthai = trangthai;
+            inValue.Body.makh = makh;
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ThemDatXeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
