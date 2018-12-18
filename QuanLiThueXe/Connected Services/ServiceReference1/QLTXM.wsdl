@@ -178,6 +178,63 @@
           <s:element minOccurs="0" maxOccurs="unbounded" name="NHACUNGCAP" nillable="true" type="tns:NHACUNGCAP" />
         </s:sequence>
       </s:complexType>
+      <s:element name="DanhSachAllXe">
+        <s:complexType />
+      </s:element>
+      <s:element name="DanhSachAllXeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DanhSachAllXeResult" type="tns:ArrayOfCHITIETXE2" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCHITIETXE2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CHITIETXE2" nillable="true" type="tns:CHITIETXE2" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CHITIETXE2">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TenBangSo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaXe" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="UploadHinhAnh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="file" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="maxe" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadHinhAnhResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="UploadXeAnh">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maxe" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="idanh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UploadXeAnhResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="ThemDatXe">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="maxe" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="ngaydat" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="trangthai" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="makh" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ThemDatXeResponse">
+        <s:complexType />
+      </s:element>
       <s:element name="DanhSachHopDongDatTruoc">
         <s:complexType />
       </s:element>
@@ -441,6 +498,30 @@
   <wsdl:message name="DanhSachHangXeSoapOut">
     <wsdl:part name="parameters" element="tns:DanhSachHangXeResponse" />
   </wsdl:message>
+  <wsdl:message name="DanhSachAllXeSoapIn">
+    <wsdl:part name="parameters" element="tns:DanhSachAllXe" />
+  </wsdl:message>
+  <wsdl:message name="DanhSachAllXeSoapOut">
+    <wsdl:part name="parameters" element="tns:DanhSachAllXeResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadHinhAnhSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadHinhAnh" />
+  </wsdl:message>
+  <wsdl:message name="UploadHinhAnhSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadHinhAnhResponse" />
+  </wsdl:message>
+  <wsdl:message name="UploadXeAnhSoapIn">
+    <wsdl:part name="parameters" element="tns:UploadXeAnh" />
+  </wsdl:message>
+  <wsdl:message name="UploadXeAnhSoapOut">
+    <wsdl:part name="parameters" element="tns:UploadXeAnhResponse" />
+  </wsdl:message>
+  <wsdl:message name="ThemDatXeSoapIn">
+    <wsdl:part name="parameters" element="tns:ThemDatXe" />
+  </wsdl:message>
+  <wsdl:message name="ThemDatXeSoapOut">
+    <wsdl:part name="parameters" element="tns:ThemDatXeResponse" />
+  </wsdl:message>
   <wsdl:message name="DanhSachHopDongDatTruocSoapIn">
     <wsdl:part name="parameters" element="tns:DanhSachHopDongDatTruoc" />
   </wsdl:message>
@@ -543,6 +624,22 @@
     <wsdl:operation name="DanhSachHangXe">
       <wsdl:input message="tns:DanhSachHangXeSoapIn" />
       <wsdl:output message="tns:DanhSachHangXeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DanhSachAllXe">
+      <wsdl:input message="tns:DanhSachAllXeSoapIn" />
+      <wsdl:output message="tns:DanhSachAllXeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadHinhAnh">
+      <wsdl:input message="tns:UploadHinhAnhSoapIn" />
+      <wsdl:output message="tns:UploadHinhAnhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UploadXeAnh">
+      <wsdl:input message="tns:UploadXeAnhSoapIn" />
+      <wsdl:output message="tns:UploadXeAnhSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ThemDatXe">
+      <wsdl:input message="tns:ThemDatXeSoapIn" />
+      <wsdl:output message="tns:ThemDatXeSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="DanhSachHopDongDatTruoc">
       <wsdl:input message="tns:DanhSachHopDongDatTruocSoapIn" />
@@ -665,6 +762,42 @@
     </wsdl:operation>
     <wsdl:operation name="DanhSachHangXe">
       <soap:operation soapAction="http://tempuri.org/DanhSachHangXe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DanhSachAllXe">
+      <soap:operation soapAction="http://tempuri.org/DanhSachAllXe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadHinhAnh">
+      <soap:operation soapAction="http://tempuri.org/UploadHinhAnh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadXeAnh">
+      <soap:operation soapAction="http://tempuri.org/UploadXeAnh" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemDatXe">
+      <soap:operation soapAction="http://tempuri.org/ThemDatXe" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -848,6 +981,42 @@
     </wsdl:operation>
     <wsdl:operation name="DanhSachHangXe">
       <soap12:operation soapAction="http://tempuri.org/DanhSachHangXe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DanhSachAllXe">
+      <soap12:operation soapAction="http://tempuri.org/DanhSachAllXe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadHinhAnh">
+      <soap12:operation soapAction="http://tempuri.org/UploadHinhAnh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadXeAnh">
+      <soap12:operation soapAction="http://tempuri.org/UploadXeAnh" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ThemDatXe">
+      <soap12:operation soapAction="http://tempuri.org/ThemDatXe" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

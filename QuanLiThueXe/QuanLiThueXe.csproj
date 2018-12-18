@@ -221,6 +221,7 @@
     <Content Include="AdminSite\Content\vendor\vector-map\jqvmap.min.css" />
     <Content Include="AdminSite\Content\vendor\wow\animate.css" />
     <Content Include="AdminSite\Content\vendor\wow\wow.min.js" />
+    <Content Include="AdminSite\HinhAnh.aspx" />
     <Content Include="AdminSite\Hopdong.aspx" />
     <None Include="Connected Services\ServiceReference1\QLTXM.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
@@ -305,6 +306,18 @@
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.XeChiTietXeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ThemDatXeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.UploadHinhAnhResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.CHITIETXE2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
@@ -326,6 +339,13 @@
     </Compile>
     <Compile Include="AdminSite\AdminSite.Master.designer.cs">
       <DependentUpon>AdminSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSite\HinhAnh.aspx.cs">
+      <DependentUpon>HinhAnh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSite\HinhAnh.aspx.designer.cs">
+      <DependentUpon>HinhAnh.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminSite\Hopdong.aspx.cs">
       <DependentUpon>Hopdong.aspx</DependentUpon>
@@ -491,6 +511,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="image\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
