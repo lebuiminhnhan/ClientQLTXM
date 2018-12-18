@@ -103,6 +103,10 @@
                             <a runat="server" href="Xe.aspx">
                                 <i class="fas fa-table"></i>Kho xe</a>
                         </li>
+                        <li>
+                            <a runat="server" href="HinhAnh.aspx">
+                                <i class="fas fa-table"></i>Thêm ảnh xe</a>
+                        </li>
                          <li>
                             <a runat="server" href="ThanhToan.aspx">
                                 <i class="fas fa-amazon"></i>Thanh toán hợp đồng</a>
