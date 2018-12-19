@@ -318,16 +318,28 @@
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ShowTaygaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.XE_ANH1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ShowConTayResponse.datasource">
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ShowChiTietResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ShowXeSoResponse.datasource">
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.CHITIETXE3.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachTayGaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachConTayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachXeSoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServiceReference1\Reference.svcmap">
@@ -397,6 +409,7 @@
     <Content Include="HomeSite\Content\styles\responsive.css" />
     <Content Include="HomeSite\Content\styles\single_responsive.css" />
     <Content Include="HomeSite\Content\styles\single_styles.css" />
+    <Content Include="HomeSite\DetailPage.aspx" />
     <Content Include="HomeSite\HomePage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -486,6 +499,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSite\DetailPage.aspx.cs">
+      <DependentUpon>DetailPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeSite\DetailPage.aspx.designer.cs">
+      <DependentUpon>DetailPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="HomeSite\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>

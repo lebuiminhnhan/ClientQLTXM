@@ -1,25 +1,29 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="HomePage.aspx.cs" Inherits="QuanLiThueXe.HomeSite.HomePage" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DetailPage.aspx.cs" Inherits="QuanLiThueXe.HomeSite.DetailPage" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Thuê Xe VIVU</title>
+	<title>Single Product</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="description" content="Thuê Xe VIVU">
+	<meta name="description" content="Thuê xe VIVU">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="Content/styles/bootstrap4/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="Content/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="Content/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="Content/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 	<link rel="stylesheet" type="text/css" href="Content/plugins/OwlCarousel2-2.2.1/animate.css">
-	<link rel="stylesheet" type="text/css" href="Content/styles/main_styles.css">
-	<link rel="stylesheet" type="text/css" href="Content/styles/responsive.css">
+	<link rel="stylesheet" href="Content/plugins/themify-icons/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="Content/plugins/jquery-ui-1.12.1.custom/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="Content/styles/single_styles.css">
+	<link rel="stylesheet" type="text/css" href="Content/styles/single_responsive.css">
+    	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
 </head>
 
 <body>
     <form id="form1" runat="server">
-        <div class="super_container">
-
+	<div class="super_container">
+        
 		<!-- Header -->
 
 		<header class="header trans_300">
@@ -30,14 +34,13 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="top_nav_left">Bạn chưa có tài khoản ?</div>
+							<div class="top_nav_left">free shipping on all u.s orders over $50</div>
 						</div>
 						<div class="col-md-6 text-right">
 							<div class="top_nav_right">
 								<ul class="top_nav_menu">
 
 									<!-- Currency / Language / My Account -->
-
 
 									<li class="account">
 										<a href="#">
@@ -67,7 +70,7 @@
 							</div>
 							<nav class="navbar">
 								<ul class="navbar_menu">
-									<li><a href="#">trang chủ</a></li>
+									<li><a href="index.html">trang chủ</a></li>
 									<li><a href="contact.html">contact</a></li>
 								</ul>
 							
@@ -83,10 +86,14 @@
 		</header>
 
 		<div class="fs_menu_overlay"></div>
+
+		<!-- Hamburger Menu -->
+
 		<div class="hamburger_menu">
 			<div class="hamburger_close"><i class="fa fa-times" aria-hidden="true"></i></div>
 			<div class="hamburger_menu_content text-right">
 				<ul class="menu_top_nav">
+
 					<li class="menu_item has-children">
 						<a href="#">
 							My Account
@@ -98,88 +105,163 @@
 						</ul>
 					</li>
 					<li class="menu_item"><a href="#">trang chủ</a></li>
+
 					<li class="menu_item"><a href="#">contact</a></li>
 				</ul>
 			</div>
 		</div>
 
-		<!-- Slider -->
-
-		<div class="main_slider" >
-			<div class="owl-carousel owl-theme">
-				<div class="item"><img src="Content/images/thuexe1.jpg" alt=""></div>
-				<div class="item"><img src="Content/images/thuexe2.jpg" alt=""></div>
-
-			</div>
-		</div>
-
-		<!-- Banner -->
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="container">
+		<div class="container single_product_container">
 			<div class="row">
-				<div class="col-lg-6">
-					<div class="newsletter_text d-flex flex-column justify-content-center align-items-lg-start align-items-md-center text-center">
-						<h4>Bạn muốn tìm xe nào để thuê?</h4>
-						<p>Mọi thứ thật dễ dàng với 1 cú click!</p>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					
-						<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
-							<input id="newsletter_email" type="email" placeholder="Tên Xe" required="required" data-error="Valid email is required.">
-							<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Tìm</button>
-						</div>
-					
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- New Arrivals -->
-
-	<div class="new_arrivals">
-		<div class="container">
-			<div class="row">
-				<div class="col ">
-					<div class="section_title new_arrivals_title">
-						<h3>Danh sách xe máy</h3>
-					</div>
-				</div>
-			</div>
-			<div class="row align-items-center">
 				<div class="col">
-					<div class="new_arrivals_sorting">
-						<ul class="arrivals_grid_sorting clearfix button-group filters-button-group">
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center active is-checked" data-filter="*">all</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".women">Xe côn tay </li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".accessories">Xe số</li>
-							<li class="grid_sorting_button button d-flex flex-column justify-content-center align-items-center" data-filter=".men">Xe tay ga</li>
+
+					<!-- Breadcrumbs -->
+
+					<div class="breadcrumbs d-flex flex-row align-items-center">
+						
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-7">
+					<div class="single_product_pics">
+						<div class="row">
+							<div class="col-lg-3 thumbnails_col order-lg-1 order-2">
+								<div class="single_product_thumbnails">
+									<ul>
+                                        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+										
+									</ul>
+								</div>
+							</div>
+							<div class="col-lg-9 image_col order-lg-2 order-1">
+								<div class="single_product_image">
+									<div class="single_product_image_background" style="background-image:url()"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5">
+                    <asp:Literal ID="Literal2" runat="server"></asp:Literal>
+					
+			</div>
+		</div>
+
+	</div>
+
+	<div class="tabs_section_container">
+
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="tabs_container">
+						<ul class="tabs d-flex flex-sm-row flex-column align-items-left align-items-md-center justify-content-center">
+							<li class="tab active" data-active-tab="tab_1"><span>Mô tả</span></li>
+							<li class="tab" data-active-tab="tab_2"><span>Thông tin thêm</span></li>
+							<li class="tab" data-active-tab="tab_3"><span>Đánh giá</span></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col">
-					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
 
-						<!-- Product 1 -->
-                        <asp:Literal ID="litayga" runat="server"></asp:Literal>
-                        <asp:Literal ID="licontay" runat="server"></asp:Literal>
-                        <asp:Literal ID="lixeso" runat="server"></asp:Literal>
-						
+					<!-- Tab Description -->
+
+					<div id="tab_1" class="tab_container active">
+						<div class="row">
+							<div class="col-lg-12 desc_col">
+								<div class="tab_title">
+									<h4>Mô tả</h4>
+								</div>
+								<asp:Literal ID="Literal3" runat="server"></asp:Literal>
+							
+							</div>
+							
+						</div>
 					</div>
+
+					<!-- Tab Additional Info -->
+
+					<div id="tab_2" class="tab_container">
+						<div class="row">
+							<div class="col additional_info_col">
+								<div class="tab_title additional_info_title">
+									<h4>Thông tin thêm</h4>
+								</div>
+								<asp:Literal ID="Literal4" runat="server"></asp:Literal>
+							
+							</div>
+						</div>
+					</div>
+
+					<!-- Tab Reviews -->
+
+					<div id="tab_3" class="tab_container">
+						<div class="row">
+
+							<!-- User Reviews -->
+
+							<div class="col-lg-6 reviews_col">
+								<div class="tab_title reviews_title">
+									<h4>Reviews (2)</h4>
+								</div>
+
+								<!-- User Review -->
+
+								<div class="user_review_container d-flex flex-column flex-sm-row">
+						
+									<div class="review">
+										<div class="review_date">27 Aug 2016</div>
+										<div class="user_name">Brandon William</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									</div>
+								</div>
+
+								<!-- User Review -->
+
+								<div class="user_review_container d-flex flex-column flex-sm-row">
+									<div class="user">
+										<div class="user_pic"></div>
+										<div class="user_rating">
+											<ul class="star_rating">
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star" aria-hidden="true"></i></li>
+												<li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+											</ul>
+										</div>
+									</div>
+									<div class="review">
+										<div class="review_date">27 Aug 2016</div>
+										<div class="user_name">Brandon William</div>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+									</div>
+								</div>
+							</div>
+
+							<!-- Add Review -->
+
+							<div class="col-lg-6 add_review_col">
+
+								<div class="add_review">
+								
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
 				</div>
 			</div>
 		</div>
+
 	</div>
-
-	
-
-	<!-- Best Sellers -->
-
-	
 
 	<!-- Benefit -->
 
@@ -226,11 +308,7 @@
 		</div>
 	</div>
 
-	<!-- Blogs -->
 
-	
-
-	
 
 	<!-- Footer -->
 
@@ -268,16 +346,16 @@
 	</footer>
 
 </div>
-    </form>
-	
-
+        </form>
 <script src="Content/js/jquery-3.2.1.min.js"></script>
 <script src="Content/styles/bootstrap4/popper.js"></script>
 <script src="Content/styles/bootstrap4/bootstrap.min.js"></script>
 <script src="Content/plugins/Isotope/isotope.pkgd.min.js"></script>
 <script src="Content/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="Content/plugins/easing/easing.js"></script>
-<script src="Content/js/custom.js"></script>
+<script src="Content/plugins/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+<script src="Content/js/single_custom.js"></script>
+
 </body>
 
 </html>

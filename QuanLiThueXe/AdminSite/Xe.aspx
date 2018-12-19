@@ -94,6 +94,12 @@
                                                     <asp:TextBox ID="txtbangso" CssClass="form-control"  runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
+                                             <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="city" class=" form-control-label">Mô tả:</label>
+                                                    <asp:TextBox ID="TextBox1" TextMode="MultiLine" CssClass="form-control"  runat="server"></asp:TextBox>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="card-footer">

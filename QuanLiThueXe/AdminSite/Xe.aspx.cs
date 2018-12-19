@@ -35,7 +35,7 @@ namespace QuanLiThueXe.AdminSite
 
         protected void btnnhap_Click(object sender, EventArgs e)
         {
-            sv.ThemChiTietXe(txttenxe.Text, txtbangso.Text, int.Parse(txtmucgiam.Text), int.Parse(txtgiathue.Text),int.Parse(DropLX.SelectedValue),int.Parse(DropNcc.SelectedValue), txtmau.Text);
+            sv.ThemChiTietXe(txttenxe.Text, txtbangso.Text, int.Parse(txtmucgiam.Text), int.Parse(txtgiathue.Text),int.Parse(DropLX.SelectedValue),int.Parse(DropNcc.SelectedValue), txtmau.Text,TextBox1.Text);
             Response.Write("<script>alert('Thêm thành công !')</script>");
             load();
         }

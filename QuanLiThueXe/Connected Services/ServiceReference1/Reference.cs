@@ -47,6 +47,9 @@ namespace QuanLiThueXe.ServiceReference1 {
         private System.Nullable<int> MucGiamGiaField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MotaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANGField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -196,6 +199,19 @@ namespace QuanLiThueXe.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string Mota {
+            get {
+                return this.MotaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MotaField, value) != true)) {
+                    this.MotaField = value;
+                    this.RaisePropertyChanged("Mota");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
         public QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANG {
             get {
                 return this.KHACHHANGField;
@@ -208,7 +224,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
         public QuanLiThueXe.ServiceReference1.LOAIXE LOAIXE {
             get {
                 return this.LOAIXEField;
@@ -221,7 +237,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=12)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=13)]
         public QuanLiThueXe.ServiceReference1.NHACUNGCAP NHACUNGCAP {
             get {
                 return this.NHACUNGCAPField;
@@ -724,10 +740,10 @@ namespace QuanLiThueXe.ServiceReference1 {
         private int MaKHField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXEField;
+        private QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANGField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANGField;
+        private QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXEField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -805,19 +821,6 @@ namespace QuanLiThueXe.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
-        public QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXE {
-            get {
-                return this.CHITIETXEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CHITIETXEField, value) != true)) {
-                    this.CHITIETXEField = value;
-                    this.RaisePropertyChanged("CHITIETXE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
         public QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANG {
             get {
                 return this.KHACHHANGField;
@@ -826,6 +829,19 @@ namespace QuanLiThueXe.ServiceReference1 {
                 if ((object.ReferenceEquals(this.KHACHHANGField, value) != true)) {
                     this.KHACHHANGField = value;
                     this.RaisePropertyChanged("KHACHHANG");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXE {
+            get {
+                return this.CHITIETXEField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CHITIETXEField, value) != true)) {
+                    this.CHITIETXEField = value;
+                    this.RaisePropertyChanged("CHITIETXE");
                 }
             }
         }
@@ -869,13 +885,13 @@ namespace QuanLiThueXe.ServiceReference1 {
         private int MaNVField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXEField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANGField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private QuanLiThueXe.ServiceReference1.NHANVIEN NHANVIENField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXEField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
@@ -1005,19 +1021,6 @@ namespace QuanLiThueXe.ServiceReference1 {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXE {
-            get {
-                return this.CHITIETXEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CHITIETXEField, value) != true)) {
-                    this.CHITIETXEField = value;
-                    this.RaisePropertyChanged("CHITIETXE");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
         public QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANG {
             get {
                 return this.KHACHHANGField;
@@ -1030,7 +1033,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
         public QuanLiThueXe.ServiceReference1.NHANVIEN NHANVIEN {
             get {
                 return this.NHANVIENField;
@@ -1039,6 +1042,19 @@ namespace QuanLiThueXe.ServiceReference1 {
                 if ((object.ReferenceEquals(this.NHANVIENField, value) != true)) {
                     this.NHANVIENField = value;
                     this.RaisePropertyChanged("NHANVIEN");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXE {
+            get {
+                return this.CHITIETXEField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.CHITIETXEField, value) != true)) {
+                    this.CHITIETXEField = value;
+                    this.RaisePropertyChanged("CHITIETXE");
                 }
             }
         }
@@ -1404,6 +1420,9 @@ namespace QuanLiThueXe.ServiceReference1 {
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string HangXeField;
         
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MotaField;
+        
         [global::System.ComponentModel.BrowsableAttribute(false)]
         public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
             get {
@@ -1514,6 +1533,236 @@ namespace QuanLiThueXe.ServiceReference1 {
                 if ((object.ReferenceEquals(this.HangXeField, value) != true)) {
                     this.HangXeField = value;
                     this.RaisePropertyChanged("HangXe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string Mota {
+            get {
+                return this.MotaField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MotaField, value) != true)) {
+                    this.MotaField = value;
+                    this.RaisePropertyChanged("Mota");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="CHITIETXE3", Namespace="http://tempuri.org/")]
+    [System.SerializableAttribute()]
+    public partial class CHITIETXE3 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        private int MaXeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TenXeField;
+        
+        private int GiaThueField;
+        
+        private System.Nullable<int> MucGiamGiaField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LoaiXeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string HangXeField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string BangSoField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string MauSacField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string TrangThaiField;
+        
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string LinkField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
+        public int MaXe {
+            get {
+                return this.MaXeField;
+            }
+            set {
+                if ((this.MaXeField.Equals(value) != true)) {
+                    this.MaXeField = value;
+                    this.RaisePropertyChanged("MaXe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false)]
+        public string TenXe {
+            get {
+                return this.TenXeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TenXeField, value) != true)) {
+                    this.TenXeField = value;
+                    this.RaisePropertyChanged("TenXe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
+        public int GiaThue {
+            get {
+                return this.GiaThueField;
+            }
+            set {
+                if ((this.GiaThueField.Equals(value) != true)) {
+                    this.GiaThueField = value;
+                    this.RaisePropertyChanged("GiaThue");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
+        public System.Nullable<int> MucGiamGia {
+            get {
+                return this.MucGiamGiaField;
+            }
+            set {
+                if ((this.MucGiamGiaField.Equals(value) != true)) {
+                    this.MucGiamGiaField = value;
+                    this.RaisePropertyChanged("MucGiamGia");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+        public string LoaiXe {
+            get {
+                return this.LoaiXeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LoaiXeField, value) != true)) {
+                    this.LoaiXeField = value;
+                    this.RaisePropertyChanged("LoaiXe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+        public string HangXe {
+            get {
+                return this.HangXeField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.HangXeField, value) != true)) {
+                    this.HangXeField = value;
+                    this.RaisePropertyChanged("HangXe");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+        public string BangSo {
+            get {
+                return this.BangSoField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.BangSoField, value) != true)) {
+                    this.BangSoField = value;
+                    this.RaisePropertyChanged("BangSo");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string MauSac {
+            get {
+                return this.MauSacField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.MauSacField, value) != true)) {
+                    this.MauSacField = value;
+                    this.RaisePropertyChanged("MauSac");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=8)]
+        public string TrangThai {
+            get {
+                return this.TrangThaiField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.TrangThaiField, value) != true)) {
+                    this.TrangThaiField = value;
+                    this.RaisePropertyChanged("TrangThai");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=9)]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
+        public string Link {
+            get {
+                return this.LinkField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.LinkField, value) != true)) {
+                    this.LinkField = value;
+                    this.RaisePropertyChanged("Link");
                 }
             }
         }
@@ -1696,26 +1945,47 @@ namespace QuanLiThueXe.ServiceReference1 {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ThanhToanTien", ReplyAction="*")]
         System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ThanhToanTienResponse> ThanhToanTienAsync(QuanLiThueXe.ServiceReference1.ThanhToanTienRequest request);
         
-        // CODEGEN: Generating message contract since element name ShowTaygaResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowTayga", ReplyAction="*")]
-        QuanLiThueXe.ServiceReference1.ShowTaygaResponse ShowTayga(QuanLiThueXe.ServiceReference1.ShowTaygaRequest request);
+        // CODEGEN: Generating message contract since element name ShowChiTietResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowChiTiet", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.ShowChiTietResponse ShowChiTiet(QuanLiThueXe.ServiceReference1.ShowChiTietRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowTayga", ReplyAction="*")]
-        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowTaygaResponse> ShowTaygaAsync(QuanLiThueXe.ServiceReference1.ShowTaygaRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowChiTiet", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowChiTietResponse> ShowChiTietAsync(QuanLiThueXe.ServiceReference1.ShowChiTietRequest request);
         
-        // CODEGEN: Generating message contract since element name ShowConTayResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowConTay", ReplyAction="*")]
-        QuanLiThueXe.ServiceReference1.ShowConTayResponse ShowConTay(QuanLiThueXe.ServiceReference1.ShowConTayRequest request);
+        // CODEGEN: Generating message contract since element name DanhSachTayGaTamResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachTayGaTam", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponse DanhSachTayGaTam(QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowConTay", ReplyAction="*")]
-        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowConTayResponse> ShowConTayAsync(QuanLiThueXe.ServiceReference1.ShowConTayRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachTayGaTam", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponse> DanhSachTayGaTamAsync(QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest request);
         
-        // CODEGEN: Generating message contract since element name ShowXeSoResult from namespace http://tempuri.org/ is not marked nillable
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowXeSo", ReplyAction="*")]
-        QuanLiThueXe.ServiceReference1.ShowXeSoResponse ShowXeSo(QuanLiThueXe.ServiceReference1.ShowXeSoRequest request);
+        // CODEGEN: Generating message contract since element name DanhSachTayGaResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachTayGa", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.DanhSachTayGaResponse DanhSachTayGa(QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ShowXeSo", ReplyAction="*")]
-        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowXeSoResponse> ShowXeSoAsync(QuanLiThueXe.ServiceReference1.ShowXeSoRequest request);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachTayGa", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachTayGaResponse> DanhSachTayGaAsync(QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest request);
+        
+        // CODEGEN: Generating message contract since element name DanhSachXeSoTamResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachXeSoTam", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse DanhSachXeSoTam(QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachXeSoTam", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse> DanhSachXeSoTamAsync(QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest request);
+        
+        // CODEGEN: Generating message contract since element name DanhSachXeSoResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachXeSo", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.DanhSachXeSoResponse DanhSachXeSo(QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachXeSo", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachXeSoResponse> DanhSachXeSoAsync(QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest request);
+        
+        // CODEGEN: Generating message contract since element name DanhSachConTayResult from namespace http://tempuri.org/ is not marked nillable
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachConTay", ReplyAction="*")]
+        QuanLiThueXe.ServiceReference1.DanhSachConTayResponse DanhSachConTay(QuanLiThueXe.ServiceReference1.DanhSachConTayRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DanhSachConTay", ReplyAction="*")]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachConTayResponse> DanhSachConTayAsync(QuanLiThueXe.ServiceReference1.DanhSachConTayRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -2789,10 +3059,13 @@ namespace QuanLiThueXe.ServiceReference1 {
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
         public string mausac;
         
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=7)]
+        public string mota;
+        
         public ThemChiTietXeRequestBody() {
         }
         
-        public ThemChiTietXeRequestBody(string tenxe, string bienso, int mucgiamgia, int giathue, int malx, int mancc, string mausac) {
+        public ThemChiTietXeRequestBody(string tenxe, string bienso, int mucgiamgia, int giathue, int malx, int mancc, string mausac, string mota) {
             this.tenxe = tenxe;
             this.bienso = bienso;
             this.mucgiamgia = mucgiamgia;
@@ -2800,6 +3073,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             this.malx = malx;
             this.mancc = mancc;
             this.mausac = mausac;
+            this.mota = mota;
         }
     }
     
@@ -3059,42 +3333,15 @@ namespace QuanLiThueXe.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowTaygaRequest {
+    public partial class ShowChiTietRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowTayga", Namespace="http://tempuri.org/", Order=0)]
-        public QuanLiThueXe.ServiceReference1.ShowTaygaRequestBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowChiTiet", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.ShowChiTietRequestBody Body;
         
-        public ShowTaygaRequest() {
+        public ShowChiTietRequest() {
         }
         
-        public ShowTaygaRequest(QuanLiThueXe.ServiceReference1.ShowTaygaRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ShowTaygaRequestBody {
-        
-        public ShowTaygaRequestBody() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowTaygaResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowTaygaResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QuanLiThueXe.ServiceReference1.ShowTaygaResponseBody Body;
-        
-        public ShowTaygaResponse() {
-        }
-        
-        public ShowTaygaResponse(QuanLiThueXe.ServiceReference1.ShowTaygaResponseBody Body) {
+        public ShowChiTietRequest(QuanLiThueXe.ServiceReference1.ShowChiTietRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -3103,43 +3350,16 @@ namespace QuanLiThueXe.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ShowTaygaResponseBody {
+    public partial class ShowChiTietRequestBody {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowTaygaResult;
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int maxe;
         
-        public ShowTaygaResponseBody() {
+        public ShowChiTietRequestBody() {
         }
         
-        public ShowTaygaResponseBody(QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowTaygaResult) {
-            this.ShowTaygaResult = ShowTaygaResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowConTayRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowConTay", Namespace="http://tempuri.org/", Order=0)]
-        public QuanLiThueXe.ServiceReference1.ShowConTayRequestBody Body;
-        
-        public ShowConTayRequest() {
-        }
-        
-        public ShowConTayRequest(QuanLiThueXe.ServiceReference1.ShowConTayRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ShowConTayRequestBody {
-        
-        public ShowConTayRequestBody() {
+        public ShowChiTietRequestBody(int maxe) {
+            this.maxe = maxe;
         }
     }
     
@@ -3147,15 +3367,15 @@ namespace QuanLiThueXe.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowConTayResponse {
+    public partial class ShowChiTietResponse {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowConTayResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QuanLiThueXe.ServiceReference1.ShowConTayResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowChiTietResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.ShowChiTietResponseBody Body;
         
-        public ShowConTayResponse() {
+        public ShowChiTietResponse() {
         }
         
-        public ShowConTayResponse(QuanLiThueXe.ServiceReference1.ShowConTayResponseBody Body) {
+        public ShowChiTietResponse(QuanLiThueXe.ServiceReference1.ShowChiTietResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -3164,43 +3384,16 @@ namespace QuanLiThueXe.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ShowConTayResponseBody {
+    public partial class ShowChiTietResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowConTayResult;
+        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowChiTietResult;
         
-        public ShowConTayResponseBody() {
+        public ShowChiTietResponseBody() {
         }
         
-        public ShowConTayResponseBody(QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowConTayResult) {
-            this.ShowConTayResult = ShowConTayResult;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowXeSoRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowXeSo", Namespace="http://tempuri.org/", Order=0)]
-        public QuanLiThueXe.ServiceReference1.ShowXeSoRequestBody Body;
-        
-        public ShowXeSoRequest() {
-        }
-        
-        public ShowXeSoRequest(QuanLiThueXe.ServiceReference1.ShowXeSoRequestBody Body) {
-            this.Body = Body;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute()]
-    public partial class ShowXeSoRequestBody {
-        
-        public ShowXeSoRequestBody() {
+        public ShowChiTietResponseBody(QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowChiTietResult) {
+            this.ShowChiTietResult = ShowChiTietResult;
         }
     }
     
@@ -3208,15 +3401,15 @@ namespace QuanLiThueXe.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
-    public partial class ShowXeSoResponse {
+    public partial class DanhSachTayGaTamRequest {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ShowXeSoResponse", Namespace="http://tempuri.org/", Order=0)]
-        public QuanLiThueXe.ServiceReference1.ShowXeSoResponseBody Body;
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachTayGaTam", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequestBody Body;
         
-        public ShowXeSoResponse() {
+        public DanhSachTayGaTamRequest() {
         }
         
-        public ShowXeSoResponse(QuanLiThueXe.ServiceReference1.ShowXeSoResponseBody Body) {
+        public DanhSachTayGaTamRequest(QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -3225,16 +3418,301 @@ namespace QuanLiThueXe.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
-    public partial class ShowXeSoResponseBody {
+    public partial class DanhSachTayGaTamRequestBody {
         
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowXeSoResult;
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int maXe;
         
-        public ShowXeSoResponseBody() {
+        public DanhSachTayGaTamRequestBody() {
         }
         
-        public ShowXeSoResponseBody(QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowXeSoResult) {
-            this.ShowXeSoResult = ShowXeSoResult;
+        public DanhSachTayGaTamRequestBody(int maXe) {
+            this.maXe = maXe;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachTayGaTamResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachTayGaTamResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponseBody Body;
+        
+        public DanhSachTayGaTamResponse() {
+        }
+        
+        public DanhSachTayGaTamResponse(QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DanhSachTayGaTamResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachTayGaTamResult;
+        
+        public DanhSachTayGaTamResponseBody() {
+        }
+        
+        public DanhSachTayGaTamResponseBody(QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachTayGaTamResult) {
+            this.DanhSachTayGaTamResult = DanhSachTayGaTamResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachTayGaRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachTayGa", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachTayGaRequestBody Body;
+        
+        public DanhSachTayGaRequest() {
+        }
+        
+        public DanhSachTayGaRequest(QuanLiThueXe.ServiceReference1.DanhSachTayGaRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class DanhSachTayGaRequestBody {
+        
+        public DanhSachTayGaRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachTayGaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachTayGaResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachTayGaResponseBody Body;
+        
+        public DanhSachTayGaResponse() {
+        }
+        
+        public DanhSachTayGaResponse(QuanLiThueXe.ServiceReference1.DanhSachTayGaResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DanhSachTayGaResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachTayGaResult;
+        
+        public DanhSachTayGaResponseBody() {
+        }
+        
+        public DanhSachTayGaResponseBody(QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachTayGaResult) {
+            this.DanhSachTayGaResult = DanhSachTayGaResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachXeSoTamRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachXeSoTam", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequestBody Body;
+        
+        public DanhSachXeSoTamRequest() {
+        }
+        
+        public DanhSachXeSoTamRequest(QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DanhSachXeSoTamRequestBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(Order=0)]
+        public int maXe;
+        
+        public DanhSachXeSoTamRequestBody() {
+        }
+        
+        public DanhSachXeSoTamRequestBody(int maXe) {
+            this.maXe = maXe;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachXeSoTamResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachXeSoTamResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponseBody Body;
+        
+        public DanhSachXeSoTamResponse() {
+        }
+        
+        public DanhSachXeSoTamResponse(QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DanhSachXeSoTamResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachXeSoTamResult;
+        
+        public DanhSachXeSoTamResponseBody() {
+        }
+        
+        public DanhSachXeSoTamResponseBody(QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachXeSoTamResult) {
+            this.DanhSachXeSoTamResult = DanhSachXeSoTamResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachXeSoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachXeSo", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachXeSoRequestBody Body;
+        
+        public DanhSachXeSoRequest() {
+        }
+        
+        public DanhSachXeSoRequest(QuanLiThueXe.ServiceReference1.DanhSachXeSoRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class DanhSachXeSoRequestBody {
+        
+        public DanhSachXeSoRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachXeSoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachXeSoResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachXeSoResponseBody Body;
+        
+        public DanhSachXeSoResponse() {
+        }
+        
+        public DanhSachXeSoResponse(QuanLiThueXe.ServiceReference1.DanhSachXeSoResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DanhSachXeSoResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachXeSoResult;
+        
+        public DanhSachXeSoResponseBody() {
+        }
+        
+        public DanhSachXeSoResponseBody(QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachXeSoResult) {
+            this.DanhSachXeSoResult = DanhSachXeSoResult;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachConTayRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachConTay", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachConTayRequestBody Body;
+        
+        public DanhSachConTayRequest() {
+        }
+        
+        public DanhSachConTayRequest(QuanLiThueXe.ServiceReference1.DanhSachConTayRequestBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute()]
+    public partial class DanhSachConTayRequestBody {
+        
+        public DanhSachConTayRequestBody() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    public partial class DanhSachConTayResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Name="DanhSachConTayResponse", Namespace="http://tempuri.org/", Order=0)]
+        public QuanLiThueXe.ServiceReference1.DanhSachConTayResponseBody Body;
+        
+        public DanhSachConTayResponse() {
+        }
+        
+        public DanhSachConTayResponse(QuanLiThueXe.ServiceReference1.DanhSachConTayResponseBody Body) {
+            this.Body = Body;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    public partial class DanhSachConTayResponseBody {
+        
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachConTayResult;
+        
+        public DanhSachConTayResponseBody() {
+        }
+        
+        public DanhSachConTayResponseBody(QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachConTayResult) {
+            this.DanhSachConTayResult = DanhSachConTayResult;
         }
     }
     
@@ -3675,7 +4153,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             return base.Channel.ThemChiTietXe(request);
         }
         
-        public void ThemChiTietXe(string tenxe, string bienso, int mucgiamgia, int giathue, int malx, int mancc, string mausac) {
+        public void ThemChiTietXe(string tenxe, string bienso, int mucgiamgia, int giathue, int malx, int mancc, string mausac, string mota) {
             QuanLiThueXe.ServiceReference1.ThemChiTietXeRequest inValue = new QuanLiThueXe.ServiceReference1.ThemChiTietXeRequest();
             inValue.Body = new QuanLiThueXe.ServiceReference1.ThemChiTietXeRequestBody();
             inValue.Body.tenxe = tenxe;
@@ -3685,6 +4163,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             inValue.Body.malx = malx;
             inValue.Body.mancc = mancc;
             inValue.Body.mausac = mausac;
+            inValue.Body.mota = mota;
             QuanLiThueXe.ServiceReference1.ThemChiTietXeResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ThemChiTietXe(inValue);
         }
         
@@ -3693,7 +4172,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             return base.Channel.ThemChiTietXeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ThemChiTietXeResponse> ThemChiTietXeAsync(string tenxe, string bienso, int mucgiamgia, int giathue, int malx, int mancc, string mausac) {
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ThemChiTietXeResponse> ThemChiTietXeAsync(string tenxe, string bienso, int mucgiamgia, int giathue, int malx, int mancc, string mausac, string mota) {
             QuanLiThueXe.ServiceReference1.ThemChiTietXeRequest inValue = new QuanLiThueXe.ServiceReference1.ThemChiTietXeRequest();
             inValue.Body = new QuanLiThueXe.ServiceReference1.ThemChiTietXeRequestBody();
             inValue.Body.tenxe = tenxe;
@@ -3703,6 +4182,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             inValue.Body.malx = malx;
             inValue.Body.mancc = mancc;
             inValue.Body.mausac = mausac;
+            inValue.Body.mota = mota;
             return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ThemChiTietXeAsync(inValue);
         }
         
@@ -3819,72 +4299,147 @@ namespace QuanLiThueXe.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QuanLiThueXe.ServiceReference1.ShowTaygaResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowTayga(QuanLiThueXe.ServiceReference1.ShowTaygaRequest request) {
-            return base.Channel.ShowTayga(request);
+        QuanLiThueXe.ServiceReference1.ShowChiTietResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowChiTiet(QuanLiThueXe.ServiceReference1.ShowChiTietRequest request) {
+            return base.Channel.ShowChiTiet(request);
         }
         
-        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowTayga() {
-            QuanLiThueXe.ServiceReference1.ShowTaygaRequest inValue = new QuanLiThueXe.ServiceReference1.ShowTaygaRequest();
-            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowTaygaRequestBody();
-            QuanLiThueXe.ServiceReference1.ShowTaygaResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowTayga(inValue);
-            return retVal.Body.ShowTaygaResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowTaygaResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowTaygaAsync(QuanLiThueXe.ServiceReference1.ShowTaygaRequest request) {
-            return base.Channel.ShowTaygaAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowTaygaResponse> ShowTaygaAsync() {
-            QuanLiThueXe.ServiceReference1.ShowTaygaRequest inValue = new QuanLiThueXe.ServiceReference1.ShowTaygaRequest();
-            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowTaygaRequestBody();
-            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowTaygaAsync(inValue);
+        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowChiTiet(int maxe) {
+            QuanLiThueXe.ServiceReference1.ShowChiTietRequest inValue = new QuanLiThueXe.ServiceReference1.ShowChiTietRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowChiTietRequestBody();
+            inValue.Body.maxe = maxe;
+            QuanLiThueXe.ServiceReference1.ShowChiTietResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowChiTiet(inValue);
+            return retVal.Body.ShowChiTietResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QuanLiThueXe.ServiceReference1.ShowConTayResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowConTay(QuanLiThueXe.ServiceReference1.ShowConTayRequest request) {
-            return base.Channel.ShowConTay(request);
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowChiTietResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowChiTietAsync(QuanLiThueXe.ServiceReference1.ShowChiTietRequest request) {
+            return base.Channel.ShowChiTietAsync(request);
         }
         
-        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowConTay() {
-            QuanLiThueXe.ServiceReference1.ShowConTayRequest inValue = new QuanLiThueXe.ServiceReference1.ShowConTayRequest();
-            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowConTayRequestBody();
-            QuanLiThueXe.ServiceReference1.ShowConTayResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowConTay(inValue);
-            return retVal.Body.ShowConTayResult;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowConTayResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowConTayAsync(QuanLiThueXe.ServiceReference1.ShowConTayRequest request) {
-            return base.Channel.ShowConTayAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowConTayResponse> ShowConTayAsync() {
-            QuanLiThueXe.ServiceReference1.ShowConTayRequest inValue = new QuanLiThueXe.ServiceReference1.ShowConTayRequest();
-            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowConTayRequestBody();
-            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowConTayAsync(inValue);
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowChiTietResponse> ShowChiTietAsync(int maxe) {
+            QuanLiThueXe.ServiceReference1.ShowChiTietRequest inValue = new QuanLiThueXe.ServiceReference1.ShowChiTietRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowChiTietRequestBody();
+            inValue.Body.maxe = maxe;
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowChiTietAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        QuanLiThueXe.ServiceReference1.ShowXeSoResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowXeSo(QuanLiThueXe.ServiceReference1.ShowXeSoRequest request) {
-            return base.Channel.ShowXeSo(request);
+        QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachTayGaTam(QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest request) {
+            return base.Channel.DanhSachTayGaTam(request);
         }
         
-        public QuanLiThueXe.ServiceReference1.XE_ANH1[] ShowXeSo() {
-            QuanLiThueXe.ServiceReference1.ShowXeSoRequest inValue = new QuanLiThueXe.ServiceReference1.ShowXeSoRequest();
-            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowXeSoRequestBody();
-            QuanLiThueXe.ServiceReference1.ShowXeSoResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowXeSo(inValue);
-            return retVal.Body.ShowXeSoResult;
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachTayGaTam(int maXe) {
+            QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequestBody();
+            inValue.Body.maXe = maXe;
+            QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachTayGaTam(inValue);
+            return retVal.Body.DanhSachTayGaTamResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowXeSoResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.ShowXeSoAsync(QuanLiThueXe.ServiceReference1.ShowXeSoRequest request) {
-            return base.Channel.ShowXeSoAsync(request);
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachTayGaTamAsync(QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest request) {
+            return base.Channel.DanhSachTayGaTamAsync(request);
         }
         
-        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.ShowXeSoResponse> ShowXeSoAsync() {
-            QuanLiThueXe.ServiceReference1.ShowXeSoRequest inValue = new QuanLiThueXe.ServiceReference1.ShowXeSoRequest();
-            inValue.Body = new QuanLiThueXe.ServiceReference1.ShowXeSoRequestBody();
-            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).ShowXeSoAsync(inValue);
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachTayGaTamResponse> DanhSachTayGaTamAsync(int maXe) {
+            QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachTayGaTamRequestBody();
+            inValue.Body.maXe = maXe;
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachTayGaTamAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        QuanLiThueXe.ServiceReference1.DanhSachTayGaResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachTayGa(QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest request) {
+            return base.Channel.DanhSachTayGa(request);
+        }
+        
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachTayGa() {
+            QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachTayGaRequestBody();
+            QuanLiThueXe.ServiceReference1.DanhSachTayGaResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachTayGa(inValue);
+            return retVal.Body.DanhSachTayGaResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachTayGaResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachTayGaAsync(QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest request) {
+            return base.Channel.DanhSachTayGaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachTayGaResponse> DanhSachTayGaAsync() {
+            QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachTayGaRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachTayGaRequestBody();
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachTayGaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachXeSoTam(QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest request) {
+            return base.Channel.DanhSachXeSoTam(request);
+        }
+        
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachXeSoTam(int maXe) {
+            QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequestBody();
+            inValue.Body.maXe = maXe;
+            QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachXeSoTam(inValue);
+            return retVal.Body.DanhSachXeSoTamResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachXeSoTamAsync(QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest request) {
+            return base.Channel.DanhSachXeSoTamAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse> DanhSachXeSoTamAsync(int maXe) {
+            QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachXeSoTamRequestBody();
+            inValue.Body.maXe = maXe;
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachXeSoTamAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        QuanLiThueXe.ServiceReference1.DanhSachXeSoResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachXeSo(QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest request) {
+            return base.Channel.DanhSachXeSo(request);
+        }
+        
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachXeSo() {
+            QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachXeSoRequestBody();
+            QuanLiThueXe.ServiceReference1.DanhSachXeSoResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachXeSo(inValue);
+            return retVal.Body.DanhSachXeSoResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachXeSoResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachXeSoAsync(QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest request) {
+            return base.Channel.DanhSachXeSoAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachXeSoResponse> DanhSachXeSoAsync() {
+            QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachXeSoRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachXeSoRequestBody();
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachXeSoAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        QuanLiThueXe.ServiceReference1.DanhSachConTayResponse QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachConTay(QuanLiThueXe.ServiceReference1.DanhSachConTayRequest request) {
+            return base.Channel.DanhSachConTay(request);
+        }
+        
+        public QuanLiThueXe.ServiceReference1.CHITIETXE3[] DanhSachConTay() {
+            QuanLiThueXe.ServiceReference1.DanhSachConTayRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachConTayRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachConTayRequestBody();
+            QuanLiThueXe.ServiceReference1.DanhSachConTayResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachConTay(inValue);
+            return retVal.Body.DanhSachConTayResult;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachConTayResponse> QuanLiThueXe.ServiceReference1.QLTXMSoap.DanhSachConTayAsync(QuanLiThueXe.ServiceReference1.DanhSachConTayRequest request) {
+            return base.Channel.DanhSachConTayAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<QuanLiThueXe.ServiceReference1.DanhSachConTayResponse> DanhSachConTayAsync() {
+            QuanLiThueXe.ServiceReference1.DanhSachConTayRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachConTayRequest();
+            inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachConTayRequestBody();
+            return ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachConTayAsync(inValue);
         }
     }
 }

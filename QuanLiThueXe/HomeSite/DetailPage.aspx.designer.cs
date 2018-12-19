@@ -10,7 +10,7 @@
 namespace QuanLiThueXe.HomeSite {
     
     
-    public partial class HomePage {
+    public partial class DetailPage {
         
         /// <summary>
         /// form1 control.
@@ -22,30 +22,39 @@ namespace QuanLiThueXe.HomeSite {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// litayga control.
+        /// Literal1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litayga;
+        protected global::System.Web.UI.WebControls.Literal Literal1;
         
         /// <summary>
-        /// licontay control.
+        /// Literal2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal licontay;
+        protected global::System.Web.UI.WebControls.Literal Literal2;
         
         /// <summary>
-        /// lixeso control.
+        /// Literal3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal lixeso;
+        protected global::System.Web.UI.WebControls.Literal Literal3;
+        
+        /// <summary>
+        /// Literal4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal Literal4;
     }
 }
