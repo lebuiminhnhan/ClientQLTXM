@@ -442,6 +442,53 @@
           <s:element minOccurs="1" maxOccurs="1" name="ThanhTien" nillable="true" type="s:double" />
         </s:sequence>
       </s:complexType>
+      <s:element name="ShowTayga">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowTaygaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowTaygaResult" type="tns:ArrayOfXE_ANH1" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfXE_ANH1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="XE_ANH1" nillable="true" type="tns:XE_ANH1" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="XE_ANH1">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Link" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GiaThue" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MucGiam" nillable="true" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="BangSo" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LoaiXe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="HangXe" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ShowConTay">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowConTayResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowConTayResult" type="tns:ArrayOfXE_ANH1" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ShowXeSo">
+        <s:complexType />
+      </s:element>
+      <s:element name="ShowXeSoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ShowXeSoResult" type="tns:ArrayOfXE_ANH1" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
   <wsdl:message name="DangNhapGGSoapIn">
@@ -588,6 +635,24 @@
   <wsdl:message name="ThanhToanTienSoapOut">
     <wsdl:part name="parameters" element="tns:ThanhToanTienResponse" />
   </wsdl:message>
+  <wsdl:message name="ShowTaygaSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowTayga" />
+  </wsdl:message>
+  <wsdl:message name="ShowTaygaSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowTaygaResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowConTaySoapIn">
+    <wsdl:part name="parameters" element="tns:ShowConTay" />
+  </wsdl:message>
+  <wsdl:message name="ShowConTaySoapOut">
+    <wsdl:part name="parameters" element="tns:ShowConTayResponse" />
+  </wsdl:message>
+  <wsdl:message name="ShowXeSoSoapIn">
+    <wsdl:part name="parameters" element="tns:ShowXeSo" />
+  </wsdl:message>
+  <wsdl:message name="ShowXeSoSoapOut">
+    <wsdl:part name="parameters" element="tns:ShowXeSoResponse" />
+  </wsdl:message>
   <wsdl:portType name="QLTXMSoap">
     <wsdl:operation name="DangNhapGG">
       <wsdl:input message="tns:DangNhapGGSoapIn" />
@@ -684,6 +749,18 @@
     <wsdl:operation name="ThanhToanTien">
       <wsdl:input message="tns:ThanhToanTienSoapIn" />
       <wsdl:output message="tns:ThanhToanTienSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowTayga">
+      <wsdl:input message="tns:ShowTaygaSoapIn" />
+      <wsdl:output message="tns:ShowTaygaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowConTay">
+      <wsdl:input message="tns:ShowConTaySoapIn" />
+      <wsdl:output message="tns:ShowConTaySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ShowXeSo">
+      <wsdl:input message="tns:ShowXeSoSoapIn" />
+      <wsdl:output message="tns:ShowXeSoSoapOut" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="QLTXMSoap" type="tns:QLTXMSoap">
@@ -904,6 +981,33 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="ShowTayga">
+      <soap:operation soapAction="http://tempuri.org/ShowTayga" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowConTay">
+      <soap:operation soapAction="http://tempuri.org/ShowConTay" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowXeSo">
+      <soap:operation soapAction="http://tempuri.org/ShowXeSo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="QLTXMSoap12" type="tns:QLTXMSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
@@ -1116,6 +1220,33 @@
     </wsdl:operation>
     <wsdl:operation name="ThanhToanTien">
       <soap12:operation soapAction="http://tempuri.org/ThanhToanTien" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowTayga">
+      <soap12:operation soapAction="http://tempuri.org/ShowTayga" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowConTay">
+      <soap12:operation soapAction="http://tempuri.org/ShowConTay" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ShowXeSo">
+      <soap12:operation soapAction="http://tempuri.org/ShowXeSo" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

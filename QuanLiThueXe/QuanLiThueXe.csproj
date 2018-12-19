@@ -318,15 +318,126 @@
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachAllXeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ShowTaygaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.XE_ANH1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ShowConTayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ShowXeSoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Global.asax" />
+    <Content Include="HomeSite\Content\images\banner_1.jpg" />
+    <Content Include="HomeSite\Content\images\banner_2.jpg" />
+    <Content Include="HomeSite\Content\images\banner_3.jpg" />
+    <Content Include="HomeSite\Content\images\blog_1.jpg" />
+    <Content Include="HomeSite\Content\images\blog_2.jpg" />
+    <Content Include="HomeSite\Content\images\blog_3.jpg" />
+    <Content Include="HomeSite\Content\images\deal_ofthe_week.png" />
+    <Content Include="HomeSite\Content\images\desc_1.jpg" />
+    <Content Include="HomeSite\Content\images\desc_2.jpg" />
+    <Content Include="HomeSite\Content\images\desc_3.jpg" />
+    <Content Include="HomeSite\Content\images\map_marker.png" />
+    <Content Include="HomeSite\Content\images\product_1.png" />
+    <Content Include="HomeSite\Content\images\product_10.png" />
+    <Content Include="HomeSite\Content\images\product_2.png" />
+    <Content Include="HomeSite\Content\images\product_3.png" />
+    <Content Include="HomeSite\Content\images\product_4.png" />
+    <Content Include="HomeSite\Content\images\product_5.png" />
+    <Content Include="HomeSite\Content\images\product_6.png" />
+    <Content Include="HomeSite\Content\images\product_7.png" />
+    <Content Include="HomeSite\Content\images\product_8.png" />
+    <Content Include="HomeSite\Content\images\product_9.png" />
+    <Content Include="HomeSite\Content\images\single_1.jpg" />
+    <Content Include="HomeSite\Content\images\single_1_thumb.jpg" />
+    <Content Include="HomeSite\Content\images\single_2.jpg" />
+    <Content Include="HomeSite\Content\images\single_2_thumb.jpg" />
+    <Content Include="HomeSite\Content\images\single_3.jpg" />
+    <Content Include="HomeSite\Content\images\single_3_thumb.jpg" />
+    <Content Include="HomeSite\Content\images\slider_1.jpg" />
+    <Content Include="HomeSite\Content\images\thuexe1.jpg" />
+    <Content Include="HomeSite\Content\images\thuexe2.jpg" />
+    <Content Include="HomeSite\Content\js\categories_custom.js" />
+    <Content Include="HomeSite\Content\js\contact_custom.js" />
+    <Content Include="HomeSite\Content\js\custom.js" />
+    <Content Include="HomeSite\Content\js\jquery-3.2.1.min.js" />
+    <Content Include="HomeSite\Content\js\single_custom.js" />
+    <Content Include="HomeSite\Content\plugins\easing\easing.js" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="HomeSite\Content\plugins\Isotope\isotope.pkgd.min.js" />
+    <Content Include="HomeSite\Content\plugins\jquery-ui-1.12.1.custom\jquery-ui.css" />
+    <Content Include="HomeSite\Content\plugins\jquery-ui-1.12.1.custom\jquery-ui.js" />
+    <Content Include="HomeSite\Content\plugins\OwlCarousel2-2.2.1\ajax-loader.gif" />
+    <Content Include="HomeSite\Content\plugins\OwlCarousel2-2.2.1\animate.css" />
+    <Content Include="HomeSite\Content\plugins\OwlCarousel2-2.2.1\owl.carousel.css" />
+    <Content Include="HomeSite\Content\plugins\OwlCarousel2-2.2.1\owl.carousel.js" />
+    <Content Include="HomeSite\Content\plugins\OwlCarousel2-2.2.1\owl.theme.default.css" />
+    <Content Include="HomeSite\Content\plugins\OwlCarousel2-2.2.1\owl.video.play.png" />
+    <Content Include="HomeSite\Content\plugins\themify-icons\fonts\themify.svg" />
+    <Content Include="HomeSite\Content\plugins\themify-icons\themify-icons.css" />
+    <Content Include="HomeSite\Content\styles\bootstrap4\bootstrap.min.css" />
+    <Content Include="HomeSite\Content\styles\bootstrap4\bootstrap.min.js" />
+    <Content Include="HomeSite\Content\styles\bootstrap4\popper.js" />
+    <Content Include="HomeSite\Content\styles\categories_responsive.css" />
+    <Content Include="HomeSite\Content\styles\categories_styles.css" />
+    <Content Include="HomeSite\Content\styles\contact_responsive.css" />
+    <Content Include="HomeSite\Content\styles\contact_styles.css" />
+    <Content Include="HomeSite\Content\styles\main_styles.css" />
+    <Content Include="HomeSite\Content\styles\responsive.css" />
+    <Content Include="HomeSite\Content\styles\single_responsive.css" />
+    <Content Include="HomeSite\Content\styles\single_styles.css" />
+    <Content Include="HomeSite\HomePage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <None Include="Connected Services\ServiceReference1\QLTXM.wsdl" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\core.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\list.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\path.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="HomeSite\Content\plugins\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="HomeSite\Content\plugins\themify-icons\fonts\themify.eot" />
+    <Content Include="HomeSite\Content\plugins\themify-icons\fonts\themify.ttf" />
+    <Content Include="HomeSite\Content\plugins\themify-icons\fonts\themify.woff" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -375,6 +486,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HomeSite\HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeSite\HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

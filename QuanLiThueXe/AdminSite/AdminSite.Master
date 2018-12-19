@@ -130,7 +130,7 @@
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
                                         <div class="image">
-                                           <h4>avatar</h4>
+                                           <h4>VIVU</h4>
                                         </div>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#"></a>
@@ -164,7 +164,7 @@
                                                 </div>
                                             </div>
                                             <div class="account-dropdown__footer">
-                                                <a href="#">
+                                                <a runat="server" href="~/HomeSite/HomePage.aspx">
                                                     <i class="zmdi zmdi-power"></i>Logout</a>
                                             </div>
                                         </div>
