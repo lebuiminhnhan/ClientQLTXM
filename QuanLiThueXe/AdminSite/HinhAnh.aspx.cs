@@ -12,13 +12,21 @@ namespace QuanLiThueXe.AdminSite
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
-            if(!IsPostBack)
+            if ((string)Session["role"] == "Admin")
             {
-                DropXe.DataSource = sv.DanhSachAllXe();
-                DropXe.DataTextField = "TenBangSo";
-                DropXe.DataValueField = "MaXe";
-                DropXe.DataBind();
+                if (!IsPostBack)
+                {
+                    DropXe.DataSource = sv.DanhSachAllXe();
+                    DropXe.DataTextField = "TenBangSo";
+                    DropXe.DataValueField = "MaXe";
+                    DropXe.DataBind();
+                }
             }
+            else
+            {
+                Response.Redirect("~/403page.aspx");          
+            }
+            
 		}
         ServiceReference1.QLTXMSoapClient sv = new ServiceReference1.QLTXMSoapClient();
         protected void Upload_Click(object sender, EventArgs e)

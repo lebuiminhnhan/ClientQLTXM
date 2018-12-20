@@ -18,7 +18,11 @@
                             <div class="row">
                             <div class="col-lg-12">
                                 <div class="table-responsive table--no-card m-b-30">
-                                    <asp:GridView CssClass="table table-borderless table-striped table-earning" ID="GridView1" runat="server"></asp:GridView>
+                                    <asp:GridView CssClass="table table-borderless table-striped table-earning" ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnSelectedIndexChanging="GridView1_SelectedIndexChanging">
+                                        <Columns>
+                                            <asp:CommandField SelectText="Sửa" ShowSelectButton="True" />
+                                        </Columns>
+                                    </asp:GridView>
                                     
                                 </div>
                             </div>
@@ -31,6 +35,18 @@
                                     </div>
                                     <div class="card-body card-block">
                                         <div class="row form-group">
+                                            <asp:Panel ID="Panel1" runat="server">
+                                                  <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="city" class=" form-control-label">Trạng Thái:</label>
+                                                 <asp:DropDownList ID="DropDownList1" CssClass="form-control" runat="server" >
+                                                     <asp:ListItem>Trống</asp:ListItem>
+                                                     <asp:ListItem>Bảo trì</asp:ListItem>
+                                                    </asp:DropDownList>
+
+                                                </div>
+                                            </div>
+                                            </asp:Panel>
                                             <div class="col-md-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="city" class=" form-control-label">Loại Xe:</label>
@@ -94,18 +110,22 @@
                                                     <asp:TextBox ID="txtbangso" CssClass="form-control"  runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
-                                             <div class="col-md-12 col-sm-12">
+                                            <asp:Panel ID="Panel2" runat="server">
+                                                 <div class="col-md-12 col-sm-12">
                                                 <div class="form-group">
                                                     <label for="city" class=" form-control-label">Mô tả:</label>
                                                     <asp:TextBox ID="TextBox1" TextMode="MultiLine" CssClass="form-control"  runat="server"></asp:TextBox>
                                                 </div>
                                             </div>
+                                            </asp:Panel>
+                                            <asp:TextBox ID="TextBox2" Visible="false" runat="server"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="card-footer">
                                        
                                         <asp:Button ID="btnnhap" runat="server" Text="Nhập" CssClass="btn btn-primary btn-sm" OnClick="btnnhap_Click" />
-                                        
+                                       <asp:Button ID="btncapnhat" runat="server" Text="Cập Nhật" CssClass="btn btn-primary btn-sm" OnClick="btncapnhat_Click" />
+
                                        
                                     </div>
                                 </div>

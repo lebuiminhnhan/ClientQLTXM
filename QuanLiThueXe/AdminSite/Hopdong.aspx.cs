@@ -17,25 +17,33 @@ namespace QuanLiThueXe.AdminSite
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(!IsPostBack)
+            if ((string)Session["role"] != "User" && (string)Session["role"] != null)
             {
-                dropkhachhang.DataSource = sv.DanhSachKhachHang();
-                dropkhachhang.DataTextField = "HoTen";
-                dropkhachhang.DataValueField = "MaKH";
-                dropkhachhang.DataBind();
+                if (!IsPostBack)
+                {
+                    dropkhachhang.DataSource = sv.DanhSachKhachHang();
+                    dropkhachhang.DataTextField = "TenKH";
+                    dropkhachhang.DataValueField = "MaKH";
+                    dropkhachhang.DataBind();
 
-                DropXe.DataSource = sv.DanhSachXe();
-                DropXe.DataTextField = "BangSo";
-                DropXe.DataValueField = "MaXe";
-                DropXe.DataBind();
+                    DropXe.DataSource = sv.DanhSachXe();
+                    DropXe.DataTextField = "BangSo";
+                    DropXe.DataValueField = "MaXe";
+                    DropXe.DataBind();
 
-                Dropnhanvien.DataSource = sv.DanhSachNhanVien();
-                Dropnhanvien.DataTextField = "HoTen";
-                Dropnhanvien.DataValueField = "MaNV";
-                Dropnhanvien.DataBind();
+                    Dropnhanvien.DataSource = sv.DanhSachNhanVien();
+                    Dropnhanvien.DataTextField = "HoTen";
+                    Dropnhanvien.DataValueField = "MaNV";
+                    Dropnhanvien.DataBind();
+                }
+
+                load();
             }
-
-            load();
+            else
+            {
+                Response.Redirect("~/403page.aspx");
+            }
+            
         }
 
         protected void btnnhap_Click(object sender, EventArgs e)

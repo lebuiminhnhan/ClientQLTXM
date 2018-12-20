@@ -41,6 +41,7 @@
 </head>
 
 <body class="animsition">
+     <form id="form1" runat="server">
     <div class="page-wrapper">
         <!-- HEADER MOBILE-->
         <header class="header-mobile d-block d-lg-none">
@@ -100,16 +101,21 @@
                                 <i class="fas fa-chart-bar"></i>Hợp đồng thuê xe</a>
                         </li>
                         <li>
-                            <a runat="server" href="Xe.aspx">
-                                <i class="fas fa-table"></i>Kho xe</a>
+                           <asp:HyperLink NavigateUrl="~/AdminSite/Xe.aspx" ID="HpXe" runat="server"><i class="fas fa-table"></i>Quản lí Xe</asp:HyperLink>
+
                         </li>
                         <li>
-                            <a runat="server" href="HinhAnh.aspx">
-                                <i class="fas fa-table"></i>Thêm ảnh xe</a>
+                            
+                        <asp:HyperLink NavigateUrl="~/AdminSite/HinhAnh.aspx" ID="HpThemanh" runat="server"><i class="fas fa-table"></i>Thêm ảnh Xe</asp:HyperLink>
+                                
                         </li>
                          <li>
                             <a runat="server" href="ThanhToan.aspx">
-                                <i class="fas fa-amazon"></i>Thanh toán hợp đồng</a>
+                                <i class="fas fa-table"></i>Thanh toán hợp đồng</a>
+                        </li>
+                         <li>
+                            <a runat="server" href="Thongke.aspx">
+                                <i class="fas fa-table"></i>Biểu đồ thống kê</a>
                         </li>
                     </ul>
                 </nav>
@@ -129,43 +135,15 @@
                              
                                 <div class="account-wrap">
                                     <div class="account-item clearfix js-item-menu">
-                                        <div class="image">
-                                           <h4>VIVU</h4>
-                                        </div>
+                                        <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                                         <div class="content">
                                             <a class="js-acc-btn" href="#"></a>
                                         </div>
                                         <div class="account-dropdown js-dropdown">
-                                            <div class="info clearfix">
-                                                <div class="image">
-                                                    <a href="#">
-                                                        <img src="Content/images/icon/avatar-01.jpg" alt="John Doe" />
-                                                    </a>
-                                                </div>
-                                                <div class="content">
-                                                    <h5 class="name">
-                                                        <a href="#">john doe</a>
-                                                    </h5>
-                                                    <span class="email">johndoe@example.com</span>
-                                                </div>
-                                            </div>
-                                            <div class="account-dropdown__body">
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-account"></i>Account</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-settings"></i>Setting</a>
-                                                </div>
-                                                <div class="account-dropdown__item">
-                                                    <a href="#">
-                                                        <i class="zmdi zmdi-money-box"></i>Billing</a>
-                                                </div>
-                                            </div>
+                                         
+                                         
                                             <div class="account-dropdown__footer">
-                                                <a runat="server" href="~/HomeSite/HomePage.aspx">
-                                                    <i class="zmdi zmdi-power"></i>Logout</a>
+                                                <asp:Button ID="btnlogout" Text="Log Out" runat="server" OnClick="btnlogout_Click" />
                                             </div>
                                         </div>
                                     </div>
@@ -178,17 +156,17 @@
             <!-- HEADER DESKTOP-->
 
             <!-- MAIN CONTENT-->
-         <form id="form1" runat="server">
+        
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
             </asp:ContentPlaceHolder>
         </div>
-    </form>
+    
         </div>
 
     </div>
-
+    </form>
     <!-- Jquery JS-->
     <script src="Content/vendor/jquery-3.2.1.min.js"></script>
     <!-- Bootstrap JS-->

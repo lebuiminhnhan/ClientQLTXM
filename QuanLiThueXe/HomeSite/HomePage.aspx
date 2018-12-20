@@ -30,7 +30,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="top_nav_left">Bạn chưa có tài khoản ?</div>
+							<div class="top_nav_left"><asp:Label ID="Label2" runat="server"></asp:Label></div>
 						</div>
 						<div class="col-md-6 text-right">
 							<div class="top_nav_right">
@@ -45,8 +45,8 @@
 											<i class="fa fa-angle-down"></i>
 										</a>
 										<ul class="account_selection">
-											<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-											<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+											<li><a runat="server" href="~/LoginSite/LoginPage.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+											<li><a runat="server" href="~/LoginSite/RegisterPage.aspx"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -63,7 +63,7 @@
 					<div class="row">
 						<div class="col-lg-12 text-right">
 							<div class="logo_container">
-								<a href="#">Thuê Xe Máy <span> VIVU</span></a>
+								<a runat="server" href="HomePage.aspx">Thuê Xe Máy <span> VIVU</span></a>
 							</div>
 							<nav class="navbar">
 								<ul class="navbar_menu">
@@ -97,8 +97,8 @@
 							<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 						</ul>
 					</li>
-					<li class="menu_item"><a href="#">trang chủ</a></li>
-					<li class="menu_item"><a href="#">contact</a></li>
+					<li class="menu_item"><a runat="server" href="HomePage.aspx">trang chủ</a></li>
+					<li class="menu_item"><a runat="server" href="contact.html">Liên hệ</a></li>
 				</ul>
 			</div>
 		</div>
@@ -109,7 +109,7 @@
 			<div class="owl-carousel owl-theme">
 				<div class="item"><img src="Content/images/thuexe1.jpg" alt=""></div>
 				<div class="item"><img src="Content/images/thuexe2.jpg" alt=""></div>
-
+                <div class="item"><img src="Content/images/thue3.jpg" alt=""></div>
 			</div>
 		</div>
 
@@ -129,8 +129,9 @@
 				<div class="col-lg-6">
 					
 						<div class="newsletter_form d-flex flex-md-row flex-column flex-xs-column align-items-center justify-content-lg-end justify-content-center">
-							<input id="newsletter_email" type="email" placeholder="Tên Xe" required="required" data-error="Valid email is required.">
-							<button id="newsletter_submit" type="submit" class="newsletter_submit_btn trans_300" value="Submit">Tìm</button>
+                            <asp:TextBox ID="TextBox1" runat="server" Height="46px" ></asp:TextBox>
+                            <asp:Button ID="Button1" CssClass="newsletter_submit_btn trans_300" runat="server" OnClick="Button1_Click" Text="Tìm" />
+							
 						</div>
 					
 				</div>
@@ -140,7 +141,8 @@
 	<!-- New Arrivals -->
 
 	<div class="new_arrivals">
-		<div class="container">
+        <asp:Panel ID="Panel1" runat="server">
+            	<div class="container">
 			<div class="row">
 				<div class="col ">
 					<div class="section_title new_arrivals_title">
@@ -166,13 +168,37 @@
 
 						<!-- Product 1 -->
                         <asp:Literal ID="litayga" runat="server"></asp:Literal>
-                        <asp:Literal ID="licontay" runat="server"></asp:Literal>
                         <asp:Literal ID="lixeso" runat="server"></asp:Literal>
+                        <asp:Literal ID="licontay" runat="server"></asp:Literal>
 						
 					</div>
 				</div>
 			</div>
 		</div>
+        </asp:Panel>
+        <asp:Panel ID="Panel2" runat="server">
+            	<div class="container">
+			<div class="row">
+				<div class="col ">
+					<div class="section_title new_arrivals_title">
+						<h3>Kết quả tìm:</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col">
+					<div class="product-grid" data-isotope='{ "itemSelector": ".product-item", "layoutMode": "fitRows" }'>
+
+						<!-- Product 1 -->
+                        <asp:Literal ID="liketqua" runat="server"></asp:Literal>
+                       
+						</div>
+					</div>
+		
+			</div>
+		</div>
+        </asp:Panel>
 	</div>
 
 	

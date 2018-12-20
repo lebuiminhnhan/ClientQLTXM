@@ -18,8 +18,16 @@ namespace QuanLiThueXe.AdminSite
        
         protected void Page_Load(object sender, EventArgs e)
         {
-            load1();
-            GridView2.Visible = false;
+           
+            if ((string)Session["role"] != "User" && (string)Session["role"] != null)
+            {
+                load1();
+                GridView2.Visible = false;
+            }
+            else
+            {
+                Response.Redirect("~/403page.aspx");
+            }
         }
 
        

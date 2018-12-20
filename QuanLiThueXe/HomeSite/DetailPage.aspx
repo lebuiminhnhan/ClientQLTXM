@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Single Product</title>
+	<title>Chi Tiết</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="description" content="Thuê xe VIVU">
@@ -34,7 +34,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-md-6">
-							<div class="top_nav_left">free shipping on all u.s orders over $50</div>
+							<div class="top_nav_left"><asp:Label ID="Label2" runat="server"></asp:Label></div>
 						</div>
 						<div class="col-md-6 text-right">
 							<div class="top_nav_right">
@@ -48,8 +48,8 @@
 											<i class="fa fa-angle-down"></i>
 										</a>
 										<ul class="account_selection">
-											<li><a href="#"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
-											<li><a href="#"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
+											<li><a runat="server" href="~/LoginSite/LoginPage.aspx"><i class="fa fa-sign-in" aria-hidden="true"></i>Sign In</a></li>
+											<li><a runat="server" href="~/LoginSite/RegisterPage.aspx"><i class="fa fa-user-plus" aria-hidden="true"></i>Register</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -66,12 +66,12 @@
 					<div class="row">
 						<div class="col-lg-12 text-right">
 							<div class="logo_container">
-								<a href="#">Thuê Xe Máy <span> VIVU</span></a>
+								<a runat="server" href="HomePage.aspx">Thuê Xe Máy <span> VIVU</span></a>
 							</div>
 							<nav class="navbar">
 								<ul class="navbar_menu">
-									<li><a href="index.html">trang chủ</a></li>
-									<li><a href="contact.html">contact</a></li>
+								<li class="menu_item"><a runat="server" href="HomePage.aspx">trang chủ</a></li>
+					<li class="menu_item"><a runat="server" href="contact.html">Liên hệ</a></li>
 								</ul>
 							
 								<div class="hamburger_container">
@@ -123,8 +123,8 @@
 
 				</div>
 			</div>
-
-			<div class="row">
+            <asp:Panel ID="Panel3" runat="server">
+<div class="row">
 				<div class="col-lg-7">
 					<div class="single_product_pics">
 						<div class="row">
@@ -145,14 +145,82 @@
 					</div>
 				</div>
 				<div class="col-lg-5">
+                    <asp:Panel ID="Panel2" runat="server">
                     <asp:Literal ID="Literal2" runat="server"></asp:Literal>
-					
-			</div>
+                    <asp:Button ID="Button1" CssClass="red_button add_to_cart_button" runat="server" OnClick="Button1_Click" Text="Đặt trước" Font-Bold="True" ForeColor="White" />
+
+                    </asp:Panel>
+                                        <asp:Panel ID="Panel1" runat="server">
+                       
+											<h4 class="text-uppercase">Thêm thông tin khách hàng</h4>
+											<p>Điền đầy đủ thông tin vào các mục bên dưới</p>
+											<p>Hoàn tất thông tin bên dưới tức là quí khách đã đặt xe, đơn đặt có hiệu lực 3 ngày kể từ bây giờ!</p>
+												<div class="form-group">
+													<asp:Label ID="Label3" runat="server" Text="Họ và tên:"></asp:Label>
+                                                  <asp:TextBox CssClass="form-control"  ID="txtten" runat="server"></asp:TextBox>
+
+												</div>
+                                                  <div class="form-group">
+													<asp:Label ID="Label7" runat="server" Text="Giới tính:"></asp:Label>
+                                                   
+                                                      <asp:CheckBox ID="CheckBox1" runat="server" Text="Nam" />
+                                                       <asp:CheckBox ID="CheckBox2" runat="server" Text="Nữ" />
+												</div>
+                                                 <div class="form-group">
+													<asp:Label ID="Label4" runat="server" Text="Năm sinh:"></asp:Label>
+                                                  <asp:TextBox CssClass="form-control" TextMode="Date"  ID="Textnamsinh" runat="server"></asp:TextBox>
+
+												</div>
+                                                  <div class="form-group">
+													<asp:Label ID="Label5" runat="server" Text="Số CMND:"></asp:Label>
+                                                  <asp:TextBox CssClass="form-control" TextMode="Number"  ID="Textcmnd" runat="server"></asp:TextBox>
+
+												</div>
+                                                    <div class="form-group">
+													<asp:Label ID="Label6" runat="server" Text="Địa chỉ:"></asp:Label>
+                                                  <asp:TextBox CssClass="form-control"   ID="Textdiachi" runat="server"></asp:TextBox>
+
+												</div>
+												<div class="form-group">
+													<asp:Label ID="Label8" runat="server" Text="Email"></asp:Label>
+                                                  <asp:TextBox CssClass="form-control" TextMode="Email" ID="Textemail" runat="server"></asp:TextBox>
+
+												</div>
+                                                <div class="form-group">
+													<asp:Label ID="Label9" runat="server" Text="Số điện thoại:"></asp:Label>
+                                                  <asp:TextBox CssClass="form-control" TextMode="Number"  ID="Textsdt" runat="server"></asp:TextBox>
+
+												</div>
+												<asp:Button runat="server"  CssClass="btn btn-info" ID="them" Text="Gửi" OnClick="them_Click"/>
+                  
+									
+										
+                    </asp:Panel>
+                
+                </div>
 		</div>
+            </asp:Panel>
+			
+                <asp:Panel ID="Panel4" runat="server">
+                     <div class="row">
+				<div class="col-lg-12">
 
+					<!-- Breadcrumbs -->
+                    <h6>Đơn đặt sẽ được ghi nhận và giải quyết trong vòng 3 ngày, mong quý khách đến địa chỉ công ty để làm thủ tục nhận xe, sau 3 ngày nếu không có phải hồi đơn đặt sẽ bị hủy!</h6>
+					<br>
+                    <br>
+                    <br>
+                    <div class="breadcrumbs d-flex flex-row align-items-center">
+                        <asp:GridView CssClass="table table-primary" ID="GridView1" runat="server"></asp:GridView>
+					</div>
+
+				</div>
+			</div>
+                </asp:Panel>
+           
 	</div>
-
-	<div class="tabs_section_container">
+        <asp:Panel ID="Panel5" runat="server">
+            <div class="tabs_section_container">
 
 		<div class="container">
 			<div class="row">
@@ -262,6 +330,8 @@
 		</div>
 
 	</div>
+        </asp:Panel>
+	
 
 	<!-- Benefit -->
 

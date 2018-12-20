@@ -44,6 +44,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ASPSnippets.GoogleAPI">
+      <HintPath>..\..\..\2018\download\GoogleLogin\GoogleLogin\GoogleLogin\bin\ASPSnippets.GoogleAPI.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
@@ -53,6 +56,7 @@
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -108,6 +112,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="403page.aspx" />
     <Content Include="AdminSite\Content\css\font-face.css" />
     <Content Include="AdminSite\Content\css\theme.css" />
     <Content Include="AdminSite\Content\fonts\poppins\poppins-v5-latin-100.svg" />
@@ -221,12 +226,14 @@
     <Content Include="AdminSite\Content\vendor\vector-map\jqvmap.min.css" />
     <Content Include="AdminSite\Content\vendor\wow\animate.css" />
     <Content Include="AdminSite\Content\vendor\wow\wow.min.js" />
+    <Content Include="AdminSite\DatThue.aspx" />
     <Content Include="AdminSite\HinhAnh.aspx" />
     <Content Include="AdminSite\Hopdong.aspx" />
     <None Include="Connected Services\ServiceReference1\QLTXM.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
     <Content Include="AdminSite\ThanhToan.aspx" />
+    <Content Include="AdminSite\Thongke.aspx" />
     <Content Include="AdminSite\Xe.aspx" />
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.CHITIETXE1.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -277,9 +284,6 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.HOPDONGDATTRUOC.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.KHACHHANG.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.LOAIXE.datasource">
@@ -342,11 +346,52 @@
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachXeSoTamResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.checkAdminResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.checkUserResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.checknameGGResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.checknameTTResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachTatCaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.TimKiemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.TimKiem2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.KHACHHANG1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachDatResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.HOPDONGDATTRUOC1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DemLuotResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.HOPDONGTHUE1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ThongKeTienTamResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\ServiceReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="count.txt" />
     <Content Include="Global.asax" />
+    <Content Include="HomeSite\contact.html" />
     <Content Include="HomeSite\Content\images\banner_1.jpg" />
     <Content Include="HomeSite\Content\images\banner_2.jpg" />
     <Content Include="HomeSite\Content\images\banner_3.jpg" />
@@ -411,6 +456,52 @@
     <Content Include="HomeSite\Content\styles\single_styles.css" />
     <Content Include="HomeSite\DetailPage.aspx" />
     <Content Include="HomeSite\HomePage.aspx" />
+    <Content Include="LoginSite\LoginFile\css\main.css" />
+    <Content Include="LoginSite\LoginFile\css\util.css" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\css\font-awesome.css" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
+    <Content Include="LoginSite\LoginFile\fonts\iconic\css\material-design-iconic-font.css" />
+    <Content Include="LoginSite\LoginFile\fonts\iconic\css\material-design-iconic-font.min.css" />
+    <Content Include="LoginSite\LoginFile\fonts\iconic\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="LoginSite\LoginFile\images\bg-01.jpg" />
+    <Content Include="LoginSite\LoginFile\images\icons\favicon.ico" />
+    <Content Include="LoginSite\LoginFile\js\main.js" />
+    <Content Include="LoginSite\LoginFile\logo.png" />
+    <Content Include="LoginSite\LoginFile\vendor\animate\animate.css" />
+    <Content Include="LoginSite\LoginFile\vendor\animsition\css\animsition.css" />
+    <Content Include="LoginSite\LoginFile\vendor\animsition\css\animsition.min.css" />
+    <Content Include="LoginSite\LoginFile\vendor\animsition\js\animsition.js" />
+    <Content Include="LoginSite\LoginFile\vendor\animsition\js\animsition.min.js" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\js\popper.js" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\js\popper.min.js" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\js\tooltip.js" />
+    <Content Include="LoginSite\LoginFile\vendor\countdowntime\countdowntime.js" />
+    <Content Include="LoginSite\LoginFile\vendor\css-hamburgers\hamburgers.css" />
+    <Content Include="LoginSite\LoginFile\vendor\css-hamburgers\hamburgers.min.css" />
+    <Content Include="LoginSite\LoginFile\vendor\daterangepicker\daterangepicker.css" />
+    <Content Include="LoginSite\LoginFile\vendor\daterangepicker\daterangepicker.js" />
+    <Content Include="LoginSite\LoginFile\vendor\daterangepicker\moment.js" />
+    <Content Include="LoginSite\LoginFile\vendor\daterangepicker\moment.min.js" />
+    <Content Include="LoginSite\LoginFile\vendor\jquery\jquery-3.2.1.min.js" />
+    <Content Include="LoginSite\LoginFile\vendor\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="LoginSite\LoginFile\vendor\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="LoginSite\LoginFile\vendor\select2\select2.css" />
+    <Content Include="LoginSite\LoginFile\vendor\select2\select2.js" />
+    <Content Include="LoginSite\LoginFile\vendor\select2\select2.min.css" />
+    <Content Include="LoginSite\LoginFile\vendor\select2\select2.min.js" />
+    <Content Include="LoginSite\LoginPage.aspx" />
+    <Content Include="LoginSite\RegisterFile\style.css" />
+    <Content Include="LoginSite\RegisterPage.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -451,18 +542,93 @@
     <Content Include="HomeSite\Content\plugins\themify-icons\fonts\themify.eot" />
     <Content Include="HomeSite\Content\plugins\themify-icons\fonts\themify.ttf" />
     <Content Include="HomeSite\Content\plugins\themify-icons\fonts\themify.woff" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.eot" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.woff2" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\fonts\FontAwesome.otf" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\animated.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\bordered-pulled.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\core.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\fixed-width.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\font-awesome.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\icons.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\larger.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\list.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\mixins.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\path.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\rotated-flipped.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\screen-reader.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\stacked.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\less\variables.less" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\font-awesome.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_animated.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_bordered-pulled.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_core.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_fixed-width.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_icons.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_larger.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_list.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_mixins.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_path.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_rotated-flipped.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_screen-reader.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_stacked.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\font-awesome-4.7.0\scss\_variables.scss" />
+    <Content Include="LoginSite\LoginFile\fonts\iconic\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="LoginSite\LoginFile\fonts\iconic\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\iconic\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="LoginSite\LoginFile\fonts\iconic\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-Black.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-BlackItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-Bold.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-BoldItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-ExtraBold.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-ExtraBoldItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-ExtraLight.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-ExtraLightItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-Italic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-Light.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-LightItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-Medium.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-MediumItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-SemiBold.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-SemiBoldItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-Thin.ttf" />
+    <Content Include="LoginSite\LoginFile\fonts\poppins\Poppins-ThinItalic.ttf" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="LoginSite\LoginFile\vendor\bootstrap\css\bootstrap.min.css.map" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="403page.aspx.cs">
+      <DependentUpon>403page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="403page.aspx.designer.cs">
+      <DependentUpon>403page.aspx</DependentUpon>
+    </Compile>
     <Compile Include="AdminSite\AdminSite.Master.cs">
       <DependentUpon>AdminSite.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="AdminSite\AdminSite.Master.designer.cs">
       <DependentUpon>AdminSite.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSite\DatThue.aspx.cs">
+      <DependentUpon>DatThue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSite\DatThue.aspx.designer.cs">
+      <DependentUpon>DatThue.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminSite\HinhAnh.aspx.cs">
       <DependentUpon>HinhAnh.aspx</DependentUpon>
@@ -484,6 +650,13 @@
     </Compile>
     <Compile Include="AdminSite\ThanhToan.aspx.designer.cs">
       <DependentUpon>ThanhToan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSite\Thongke.aspx.cs">
+      <DependentUpon>Thongke.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSite\Thongke.aspx.designer.cs">
+      <DependentUpon>Thongke.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminSite\Xe.aspx.cs">
       <DependentUpon>Xe.aspx</DependentUpon>
@@ -513,6 +686,20 @@
     </Compile>
     <Compile Include="HomeSite\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSite\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginSite\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSite\RegisterPage.aspx.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginSite\RegisterPage.aspx.designer.cs">
+      <DependentUpon>RegisterPage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
