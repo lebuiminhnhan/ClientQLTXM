@@ -40,12 +40,19 @@ namespace QuanLiThueXe.AdminSite
             }
             HpThemanh.Visible = false;
             HpXe.Visible = false;
+            HyperLink1.Visible = false;
+            HyperLink2.Visible = false;
+            HyperLink3.Visible = false;
             if ((string)Session["role"] != "User")
             {
                 if ((string)Session["role"] == "Admin")
                 {
                     HpThemanh.Visible = true;
                     HpXe.Visible = true;
+                    HyperLink1.Visible = true;
+                    HyperLink3.Visible = true;
+                    HyperLink2.Visible = true;
+
                 }
             }
             else

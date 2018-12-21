@@ -16,11 +16,12 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                             <div class="row">
+                                <h3>Quản lí đặt xe</h3>
                             <div class="col-lg-12">
                                 <div class="table-responsive table--no-card m-b-30">
-                                    <asp:GridView CssClass="table table-borderless table-striped table-earning" ID="GridView1" runat="server" >
+                                    <asp:GridView CssClass="table table-borderless table-striped table-earning" ID="GridView1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" runat="server" >
                                         <Columns>
-                                            <asp:CommandField SelectText="Sửa" ShowSelectButton="True" />
+                                            <asp:CommandField SelectText="Hủy Đặt" ShowSelectButton="True" />
                                         </Columns>
                                     </asp:GridView>
                                     
@@ -31,13 +32,45 @@
                             <div class="col-sm-12 col-lg-12">
                                 <div class="card">
                                     <div class="card-header">
-                                       
+                                       Xác nhận hủy đơn đặt xe
                                     </div>
                                     <div class="card-body card-block">
-                                      
-                                        
+                                       <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="city" class=" form-control-label">Xe:</label>
+                                                    <asp:TextBox ID="TextBox1" CssClass="form-control" Enabled="false"  runat="server"></asp:TextBox>
+                                                    
+                                                </div>
+                                            </div>
+                                        <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="city" class=" form-control-label">Tên khách hàng:</label>
+                                                    <asp:TextBox ID="TextBox2" CssClass="form-control" Enabled="false"  runat="server"></asp:TextBox>
+                                                    
+                                                </div>
+                                            </div>
+                                        <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="city" class=" form-control-label">Số điện thoại:</label>
+                                                    <asp:TextBox ID="TextBox3" CssClass="form-control" Enabled="false"  runat="server"></asp:TextBox>
+                                                    
+                                                </div>
+                                            </div>
+                                         <div class="col-md-12 col-sm-12">
+                                                <div class="form-group">
+                                                    <label for="city" class=" form-control-label">Ngày đặt</label>
+                                                    <asp:TextBox ID="TextBox4" CssClass="form-control" Enabled="false"  runat="server"></asp:TextBox>
+                                                    
+                                                </div>
+                                            </div>
                                     </div>
-                                    
+                                     <div class="card-footer">
+                                       
+                                        <asp:Button ID="btnnhap" runat="server" Text="Xác nhận" CssClass="btn btn-primary btn-lg" OnClick="btnnhap_Click" />
+
+                                       <asp:TextBox ID="TextBox5" Visible="false" CssClass="form-control" Enabled="false"  runat="server"></asp:TextBox>
+                                                    
+                                    </div>
                                 </div>
                             </div>
                

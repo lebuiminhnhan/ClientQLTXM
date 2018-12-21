@@ -365,24 +365,24 @@
       <s:element name="DanhSachHopDongDatTruocResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="DanhSachHopDongDatTruocResult" type="tns:ArrayOfHOPDONGDATTRUOC" />
+            <s:element minOccurs="0" maxOccurs="1" name="DanhSachHopDongDatTruocResult" type="tns:ArrayOfHOPDONGDATTRUOC2" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfHOPDONGDATTRUOC">
+      <s:complexType name="ArrayOfHOPDONGDATTRUOC2">
         <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="HOPDONGDATTRUOC" nillable="true" type="tns:HOPDONGDATTRUOC" />
+          <s:element minOccurs="0" maxOccurs="unbounded" name="HOPDONGDATTRUOC2" nillable="true" type="tns:HOPDONGDATTRUOC2" />
         </s:sequence>
       </s:complexType>
-      <s:complexType name="HOPDONGDATTRUOC">
+      <s:complexType name="HOPDONGDATTRUOC2">
         <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="MaHDDT" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="MaXe" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="NgayDenThue" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaDD" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Xe" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TenKH" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiaChi" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SDT" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NgayDat" type="s:dateTime" />
           <s:element minOccurs="0" maxOccurs="1" name="TrangThai" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="MaKH" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="CHITIETXE" type="tns:CHITIETXE" />
-          <s:element minOccurs="0" maxOccurs="1" name="KHACHHANG" type="tns:KHACHHANG" />
         </s:sequence>
       </s:complexType>
       <s:element name="DanhSachThue">
@@ -487,6 +487,16 @@
         </s:complexType>
       </s:element>
       <s:element name="XeChiTietXeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CapNhatTrangThaiXeTrong">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="bangsoxe" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CapNhatTrangThaiXeTrongResponse">
         <s:complexType />
       </s:element>
       <s:element name="CapNhatTrangThaiXe">
@@ -889,6 +899,12 @@
   <wsdl:message name="XeChiTietXeSoapOut">
     <wsdl:part name="parameters" element="tns:XeChiTietXeResponse" />
   </wsdl:message>
+  <wsdl:message name="CapNhatTrangThaiXeTrongSoapIn">
+    <wsdl:part name="parameters" element="tns:CapNhatTrangThaiXeTrong" />
+  </wsdl:message>
+  <wsdl:message name="CapNhatTrangThaiXeTrongSoapOut">
+    <wsdl:part name="parameters" element="tns:CapNhatTrangThaiXeTrongResponse" />
+  </wsdl:message>
   <wsdl:message name="CapNhatTrangThaiXeSoapIn">
     <wsdl:part name="parameters" element="tns:CapNhatTrangThaiXe" />
   </wsdl:message>
@@ -1085,6 +1101,10 @@
     <wsdl:operation name="XeChiTietXe">
       <wsdl:input message="tns:XeChiTietXeSoapIn" />
       <wsdl:output message="tns:XeChiTietXeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CapNhatTrangThaiXeTrong">
+      <wsdl:input message="tns:CapNhatTrangThaiXeTrongSoapIn" />
+      <wsdl:output message="tns:CapNhatTrangThaiXeTrongSoapOut" />
     </wsdl:operation>
     <wsdl:operation name="CapNhatTrangThaiXe">
       <wsdl:input message="tns:CapNhatTrangThaiXeSoapIn" />
@@ -1371,6 +1391,15 @@
     </wsdl:operation>
     <wsdl:operation name="XeChiTietXe">
       <soap:operation soapAction="http://tempuri.org/XeChiTietXe" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapNhatTrangThaiXeTrong">
+      <soap:operation soapAction="http://tempuri.org/CapNhatTrangThaiXeTrong" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1743,6 +1772,15 @@
     </wsdl:operation>
     <wsdl:operation name="XeChiTietXe">
       <soap12:operation soapAction="http://tempuri.org/XeChiTietXe" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CapNhatTrangThaiXeTrong">
+      <soap12:operation soapAction="http://tempuri.org/CapNhatTrangThaiXeTrong" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>

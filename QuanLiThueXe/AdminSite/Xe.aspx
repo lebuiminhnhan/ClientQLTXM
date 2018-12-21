@@ -16,6 +16,7 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                             <div class="row">
+                                <h3>Quản lí xe</h3>
                             <div class="col-lg-12">
                                 <div class="table-responsive table--no-card m-b-30">
                                     <asp:GridView CssClass="table table-borderless table-striped table-earning" ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnSelectedIndexChanging="GridView1_SelectedIndexChanging">

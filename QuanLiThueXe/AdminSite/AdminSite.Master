@@ -113,6 +113,22 @@
                             <a runat="server" href="ThanhToan.aspx">
                                 <i class="fas fa-table"></i>Thanh toán hợp đồng</a>
                         </li>
+                        <li>
+                            <a runat="server" href="DatThue.aspx">
+                                <i class="fas fa-table"></i>Quản lí đặt xe</a>
+                        </li>
+                        <li>
+                                                    <asp:HyperLink NavigateUrl="~/AdminSite/HinhAnh.aspx" ID="HyperLink2" runat="server"><i class="fas fa-table"></i>Quản lí khách hàng</asp:HyperLink>
+
+                        </li>
+                        <li>
+                                                    <asp:HyperLink NavigateUrl="~/AdminSite/HinhAnh.aspx" ID="HyperLink1" runat="server"><i class="fas fa-table"></i>Quản lí nhân  viên</asp:HyperLink>
+
+                        </li>
+                          <li>
+                                                    <asp:HyperLink NavigateUrl="~/AdminSite/HinhAnh.aspx" ID="HyperLink3" runat="server"><i class="fas fa-table"></i>Quản lí tài khoản</asp:HyperLink>
+
+                        </li>
                          <li>
                             <a runat="server" href="Thongke.aspx">
                                 <i class="fas fa-table"></i>Biểu đồ thống kê</a>
