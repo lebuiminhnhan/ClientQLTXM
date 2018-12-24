@@ -18,6 +18,9 @@
                 <div class="section__content section__content--p30">
                     <div class="container-fluid">
                           <div class="row">
+                              <asp:Label ID="Label2" runat="server" Visible="false" Text="Label"></asp:Label>
+                              <h3>Quản lí hợp đồng</h3>
+                              <br />
                             <div class="col-lg-12">
                                 <div class="row">
                                     <div class="col-10">
@@ -26,6 +29,7 @@
                                     <asp:ListItem>Tất Cả</asp:ListItem>
                                     <asp:ListItem>Đã Thanh Toán</asp:ListItem>
                                     <asp:ListItem>Đang Thuê</asp:ListItem>
+                                        <asp:ListItem>Đã hủy</asp:ListItem>
                                 </asp:DropDownList>
                                     
                                 </div>
@@ -37,20 +41,27 @@
                                 
                                 
                                 <div class="table-responsive table--no-card m-b-30">
-                                    <asp:GridView DataKeyNames="SoDDT" CssClass="table table-borderless table-striped table-earning" ID="GridView1" runat="server" >
+                                    <asp:GridView DataKeyNames="SoDDT" CssClass="table table-borderless table-striped table-earning" ID="GridView1" runat="server" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" >
+                                        <Columns>
+                                            <asp:CommandField SelectText="Chọn" ShowSelectButton="True" />
+                                        </Columns>
                                        
                                     </asp:GridView>
-                                   
+                                    <asp:TextBox ID="TextBox1" Visible="false" runat="server"></asp:TextBox>
+                                     <asp:TextBox ID="TextBox2" Visible="false" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
-                         <div class="row">
+                         <asp:Panel ID="Panel1" runat="server">
+                               <div class="row">
                             <div class="col-sm-12 col-lg-6">
                                 <div class="card">
                                     <div class="card-header">
                                        
                                     </div>
                                     <div class="card-body card-block">
+                                       
+                                        
                                         <div class="row form-group">
                                             <div class="col-md-12 col-sm-12">
                                                 <div class="form-group">
@@ -113,6 +124,27 @@
                                 </div>
                             </div>
                         </div> 
+                                        </asp:Panel>
+                        <asp:Panel ID="Panel2" Visible="false"  runat="server">
+                             <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                       
+                                    </div>
+                                    <div class="card-body card-block">
+                                       
+                             <h6>Bạn có chắc muốn hủy hợp đồng với mã SDDT</h6>
+                                            <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+                                            <h6>này không?</h6>
+                                            									<asp:Button runat="server"  CssClass="btn btn-danger" ID="Button2" Text="Xóa" OnClick="Button2_Click"/>
+									<asp:Button runat="server"  CssClass="btn btn-info" ID="Button3" Text="Hủy" OnClick="Button3_Click"/>
+</div>
+                                    </div>
+                                </div>
+                                 </div>
+                        </asp:Panel>
+                       
                       
                                 
                         <div class="row">

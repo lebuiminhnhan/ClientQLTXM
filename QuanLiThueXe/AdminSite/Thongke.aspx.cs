@@ -12,7 +12,7 @@ namespace QuanLiThueXe.AdminSite
         ServiceReference1.QLTXMSoapClient sv = new ServiceReference1.QLTXMSoapClient();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((string)Session["role"] != "User" && (string)Session["role"] != null)
+            if ((string)Session["role"] != "User" && (string)Session["role"] != null && (string)Session["role"] != "Block")
             {
                 
             }
@@ -41,6 +41,8 @@ namespace QuanLiThueXe.AdminSite
             Chart2.Series["VND"].XValueMember = "BangSo";
             Chart2.Series["VND"].YValueMembers = "ThanhTien";
             Chart2.DataBind();
+
+            Literal1.Text = "Doanh Thu trong tháng : " + sv.ThongKeTienThang(int.Parse(DropDownList1.SelectedValue)) + " VND"; ;
         }
     }
 }

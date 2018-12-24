@@ -41,7 +41,7 @@ namespace QuanLiThueXe.AdminSite
             HpThemanh.Visible = false;
             HpXe.Visible = false;
             HyperLink1.Visible = false;
-            HyperLink2.Visible = false;
+          
             HyperLink3.Visible = false;
             if ((string)Session["role"] != "User")
             {
@@ -51,7 +51,7 @@ namespace QuanLiThueXe.AdminSite
                     HpXe.Visible = true;
                     HyperLink1.Visible = true;
                     HyperLink3.Visible = true;
-                    HyperLink2.Visible = true;
+                  
 
                 }
             }
@@ -65,7 +65,8 @@ namespace QuanLiThueXe.AdminSite
         protected void btnlogout_Click(object sender, EventArgs e)
         {
             Session.Remove("role");
-          
+            Session.Remove("name");
+            
             bool gone = (Session["name"] == null);
             if (gone)
             {

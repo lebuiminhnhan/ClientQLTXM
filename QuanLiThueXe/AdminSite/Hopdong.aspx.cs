@@ -17,7 +17,8 @@ namespace QuanLiThueXe.AdminSite
         }
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ((string)Session["role"] != "User" && (string)Session["role"] != null)
+            string manv = sv.checkNV((string)Session["name"]);
+            if ((string)Session["role"] != "User" && (string)Session["role"] != null && (string)Session["role"] != "Block")
             {
                 if (!IsPostBack)
                 {
@@ -30,8 +31,21 @@ namespace QuanLiThueXe.AdminSite
                     DropXe.DataTextField = "BangSo";
                     DropXe.DataValueField = "MaXe";
                     DropXe.DataBind();
-
-                    Dropnhanvien.DataSource = sv.DanhSachNhanVien();
+                    try
+                    {
+                        if ((string)Session["role"] == "Admin" )
+                        {
+                            Dropnhanvien.DataSource = sv.DanhSachNhanVien();
+                        }
+                        else
+                        {
+                            Dropnhanvien.DataSource = sv.DanhSachNhanVien().Where(x => x.MaNV == int.Parse(manv));
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        Label2.Text = "!";
+                    }
                     Dropnhanvien.DataTextField = "HoTen";
                     Dropnhanvien.DataValueField = "MaNV";
                     Dropnhanvien.DataBind();
@@ -80,6 +94,34 @@ namespace QuanLiThueXe.AdminSite
                 GridView1.DataSource = sv.LocHopDongThue(CheckTrangThai.SelectedValue);
                 GridView1.DataBind();
             }
+            if (CheckTrangThai.SelectedValue == "Đã hủy")
+            {
+                GridView1.DataSource = sv.LocHopDongThue(CheckTrangThai.SelectedValue);
+                GridView1.DataBind();
+            }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            
+            sv.HuyHopDong(int.Parse(TextBox1.Text),TextBox2.Text);
+            Response.Write("<script>alert('Hủy hoàn tất')</script>");
+            load();
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            Panel1.Visible = true;
+            Panel2.Visible = false;
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            TextBox1.Text = HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[1].Text);
+            TextBox2.Text = HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[2].Text);
+            Label1.Text = HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[1].Text);
+            Panel1.Visible = false;
+            Panel2.Visible = true;
         }
     }
 }

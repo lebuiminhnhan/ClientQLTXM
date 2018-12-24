@@ -71,8 +71,7 @@ namespace QuanLiThueXe.AdminSite
             if(GridView1.SelectedRow.Cells[9].Text=="Trống" || GridView1.SelectedRow.Cells[9].Text == "Bảo trì")
             {
                 DropDownList1.SelectedValue = HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[9].Text);
-               // DropLX.SelectedValue = HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[5].Text);
-               // DropNcc.SelectedValue = HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[6].Text);
+               
                 txtbangso.Text = HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[7].Text);
                 txtgiathue.Text= HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[3].Text);
                 txtmau.Text= HttpUtility.HtmlDecode(GridView1.SelectedRow.Cells[8].Text);

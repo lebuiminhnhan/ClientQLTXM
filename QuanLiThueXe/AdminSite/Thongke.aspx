@@ -47,7 +47,9 @@
                       <div class="row">
                             <div class="col-sm-12 col-lg-12">
                                 <div class="card">
-                               
+                               <div class="card-header">
+                                   <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+                                   </div>
                                     <div class="card-body card-block">
                                         <asp:Chart ID="Chart2" runat="server" Width="605px">
                                             <Series>

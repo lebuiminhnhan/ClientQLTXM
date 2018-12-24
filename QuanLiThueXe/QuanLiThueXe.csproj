@@ -232,6 +232,9 @@
     <None Include="Connected Services\ServiceReference1\QLTXM.disco" />
     <None Include="Connected Services\ServiceReference1\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference1\configuration.svcinfo" />
+    <Content Include="AdminSite\KhachHang.aspx" />
+    <Content Include="AdminSite\NhanVien.aspx" />
+    <Content Include="AdminSite\TaiKhoan.aspx" />
     <Content Include="AdminSite\ThanhToan.aspx" />
     <Content Include="AdminSite\Thongke.aspx" />
     <Content Include="AdminSite\Xe.aspx" />
@@ -386,6 +389,42 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.HOPDONGDATTRUOC2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachKHResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.KHACHHANG.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.SuaKHResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ThemKhachHangResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.HOPDONGTHUE2.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.HuyHopDongResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachTKResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.User_User1.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.KhoaTKResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ThemTKResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.ThongKeTienThangResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.checkNVResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <None Include="Connected Services\ServiceReference1\Reference.svcmap">
@@ -646,6 +685,27 @@
     </Compile>
     <Compile Include="AdminSite\Hopdong.aspx.designer.cs">
       <DependentUpon>Hopdong.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSite\KhachHang.aspx.cs">
+      <DependentUpon>KhachHang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSite\KhachHang.aspx.designer.cs">
+      <DependentUpon>KhachHang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSite\NhanVien.aspx.cs">
+      <DependentUpon>NhanVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSite\NhanVien.aspx.designer.cs">
+      <DependentUpon>NhanVien.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSite\TaiKhoan.aspx.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminSite\TaiKhoan.aspx.designer.cs">
+      <DependentUpon>TaiKhoan.aspx</DependentUpon>
     </Compile>
     <Compile Include="AdminSite\ThanhToan.aspx.cs">
       <DependentUpon>ThanhToan.aspx</DependentUpon>

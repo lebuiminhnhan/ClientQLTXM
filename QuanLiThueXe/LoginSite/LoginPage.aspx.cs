@@ -77,7 +77,7 @@ namespace QuanLiThueXe.LoginSite
             {
                 if (sv.DangNhapTT(TextBox1.Text, TextBox2.Text) == true)
                 {
-
+                    Session["nv"] = sv.checkNV(TextBox1.Text);
                     Session["role"] = sv.checkAdmin(TextBox1.Text);
                     Session["name"] = sv.checknameTT(TextBox1.Text);
                     if ((string)Session["role"] != "User")
