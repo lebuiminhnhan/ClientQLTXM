@@ -1423,219 +1423,6 @@ namespace QuanLiThueXe.ServiceReference1 {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="HOPDONGTHUE", Namespace="http://tempuri.org/")]
-    [System.SerializableAttribute()]
-    public partial class HOPDONGTHUE : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
-        
-        [System.NonSerializedAttribute()]
-        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
-        
-        private int SoDDTField;
-        
-        private int MaXeField;
-        
-        private int GiaThueField;
-        
-        private int MucGiamGiaField;
-        
-        private System.DateTime NgayThueField;
-        
-        private System.DateTime NgayTraField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string TrangThaiField;
-        
-        private int MaKHField;
-        
-        private int MaNVField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANGField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QuanLiThueXe.ServiceReference1.NHANVIEN NHANVIENField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXEField;
-        
-        [global::System.ComponentModel.BrowsableAttribute(false)]
-        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
-            get {
-                return this.extensionDataField;
-            }
-            set {
-                this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true)]
-        public int SoDDT {
-            get {
-                return this.SoDDTField;
-            }
-            set {
-                if ((this.SoDDTField.Equals(value) != true)) {
-                    this.SoDDTField = value;
-                    this.RaisePropertyChanged("SoDDT");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=1)]
-        public int MaXe {
-            get {
-                return this.MaXeField;
-            }
-            set {
-                if ((this.MaXeField.Equals(value) != true)) {
-                    this.MaXeField = value;
-                    this.RaisePropertyChanged("MaXe");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=2)]
-        public int GiaThue {
-            get {
-                return this.GiaThueField;
-            }
-            set {
-                if ((this.GiaThueField.Equals(value) != true)) {
-                    this.GiaThueField = value;
-                    this.RaisePropertyChanged("GiaThue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=3)]
-        public int MucGiamGia {
-            get {
-                return this.MucGiamGiaField;
-            }
-            set {
-                if ((this.MucGiamGiaField.Equals(value) != true)) {
-                    this.MucGiamGiaField = value;
-                    this.RaisePropertyChanged("MucGiamGia");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=4)]
-        public System.DateTime NgayThue {
-            get {
-                return this.NgayThueField;
-            }
-            set {
-                if ((this.NgayThueField.Equals(value) != true)) {
-                    this.NgayThueField = value;
-                    this.RaisePropertyChanged("NgayThue");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=5)]
-        public System.DateTime NgayTra {
-            get {
-                return this.NgayTraField;
-            }
-            set {
-                if ((this.NgayTraField.Equals(value) != true)) {
-                    this.NgayTraField = value;
-                    this.RaisePropertyChanged("NgayTra");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
-        public string TrangThai {
-            get {
-                return this.TrangThaiField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.TrangThaiField, value) != true)) {
-                    this.TrangThaiField = value;
-                    this.RaisePropertyChanged("TrangThai");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=7)]
-        public int MaKH {
-            get {
-                return this.MaKHField;
-            }
-            set {
-                if ((this.MaKHField.Equals(value) != true)) {
-                    this.MaKHField = value;
-                    this.RaisePropertyChanged("MaKH");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(IsRequired=true, Order=8)]
-        public int MaNV {
-            get {
-                return this.MaNVField;
-            }
-            set {
-                if ((this.MaNVField.Equals(value) != true)) {
-                    this.MaNVField = value;
-                    this.RaisePropertyChanged("MaNV");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=9)]
-        public QuanLiThueXe.ServiceReference1.KHACHHANG KHACHHANG {
-            get {
-                return this.KHACHHANGField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.KHACHHANGField, value) != true)) {
-                    this.KHACHHANGField = value;
-                    this.RaisePropertyChanged("KHACHHANG");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=10)]
-        public QuanLiThueXe.ServiceReference1.NHANVIEN NHANVIEN {
-            get {
-                return this.NHANVIENField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.NHANVIENField, value) != true)) {
-                    this.NHANVIENField = value;
-                    this.RaisePropertyChanged("NHANVIEN");
-                }
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=11)]
-        public QuanLiThueXe.ServiceReference1.CHITIETXE CHITIETXE {
-            get {
-                return this.CHITIETXEField;
-            }
-            set {
-                if ((object.ReferenceEquals(this.CHITIETXEField, value) != true)) {
-                    this.CHITIETXEField = value;
-                    this.RaisePropertyChanged("CHITIETXE");
-                }
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
     [System.Runtime.Serialization.DataContractAttribute(Name="CHITIETXE1", Namespace="http://tempuri.org/")]
     [System.SerializableAttribute()]
     public partial class CHITIETXE1 : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
@@ -4575,12 +4362,12 @@ namespace QuanLiThueXe.ServiceReference1 {
     public partial class DanhSachThueChuaThanhToanResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public QuanLiThueXe.ServiceReference1.HOPDONGTHUE[] DanhSachThueChuaThanhToanResult;
+        public QuanLiThueXe.ServiceReference1.HOPDONGTHUE2[] DanhSachThueChuaThanhToanResult;
         
         public DanhSachThueChuaThanhToanResponseBody() {
         }
         
-        public DanhSachThueChuaThanhToanResponseBody(QuanLiThueXe.ServiceReference1.HOPDONGTHUE[] DanhSachThueChuaThanhToanResult) {
+        public DanhSachThueChuaThanhToanResponseBody(QuanLiThueXe.ServiceReference1.HOPDONGTHUE2[] DanhSachThueChuaThanhToanResult) {
             this.DanhSachThueChuaThanhToanResult = DanhSachThueChuaThanhToanResult;
         }
     }
@@ -6534,7 +6321,7 @@ namespace QuanLiThueXe.ServiceReference1 {
             return base.Channel.DanhSachThueChuaThanhToan(request);
         }
         
-        public QuanLiThueXe.ServiceReference1.HOPDONGTHUE[] DanhSachThueChuaThanhToan() {
+        public QuanLiThueXe.ServiceReference1.HOPDONGTHUE2[] DanhSachThueChuaThanhToan() {
             QuanLiThueXe.ServiceReference1.DanhSachThueChuaThanhToanRequest inValue = new QuanLiThueXe.ServiceReference1.DanhSachThueChuaThanhToanRequest();
             inValue.Body = new QuanLiThueXe.ServiceReference1.DanhSachThueChuaThanhToanRequestBody();
             QuanLiThueXe.ServiceReference1.DanhSachThueChuaThanhToanResponse retVal = ((QuanLiThueXe.ServiceReference1.QLTXMSoap)(this)).DanhSachThueChuaThanhToan(inValue);

@@ -409,6 +409,14 @@
 				<div class="col-lg-12">
 					<div class="footer_nav_container">
 						<div class="cr">©2018 Thuê Xe Máy VIVU </div>
+                        
+						 Tổng số: 
+<asp:Label ID="Label1" runat="server" Text=""><%= Application["Access"].ToString()%></asp:Label> lượt truy cập
+						<br />
+                          
+                Đang Online: 
+<asp:Label ID="lblCount" runat="server" Text=""><%= Application["Online"].ToString()%></asp:Label> đang online
+   
 					</div>
 				</div>
 			</div>

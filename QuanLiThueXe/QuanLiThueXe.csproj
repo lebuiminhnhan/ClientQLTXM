@@ -247,9 +247,6 @@
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.DanhSachXeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.HOPDONGTHUE.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
     <Content Include="Connected Services\ServiceReference1\QuanLiThueXe.ServiceReference1.THANHTOAN.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>

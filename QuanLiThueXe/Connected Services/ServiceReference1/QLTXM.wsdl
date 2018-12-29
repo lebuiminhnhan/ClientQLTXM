@@ -552,31 +552,10 @@
       <s:element name="DanhSachThueChuaThanhToanResponse">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="DanhSachThueChuaThanhToanResult" type="tns:ArrayOfHOPDONGTHUE" />
+            <s:element minOccurs="0" maxOccurs="1" name="DanhSachThueChuaThanhToanResult" type="tns:ArrayOfHOPDONGTHUE2" />
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:complexType name="ArrayOfHOPDONGTHUE">
-        <s:sequence>
-          <s:element minOccurs="0" maxOccurs="unbounded" name="HOPDONGTHUE" nillable="true" type="tns:HOPDONGTHUE" />
-        </s:sequence>
-      </s:complexType>
-      <s:complexType name="HOPDONGTHUE">
-        <s:sequence>
-          <s:element minOccurs="1" maxOccurs="1" name="SoDDT" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="MaXe" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="GiaThue" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="MucGiamGia" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="NgayThue" type="s:dateTime" />
-          <s:element minOccurs="1" maxOccurs="1" name="NgayTra" type="s:dateTime" />
-          <s:element minOccurs="0" maxOccurs="1" name="TrangThai" type="s:string" />
-          <s:element minOccurs="1" maxOccurs="1" name="MaKH" type="s:int" />
-          <s:element minOccurs="1" maxOccurs="1" name="MaNV" type="s:int" />
-          <s:element minOccurs="0" maxOccurs="1" name="KHACHHANG" type="tns:KHACHHANG" />
-          <s:element minOccurs="0" maxOccurs="1" name="NHANVIEN" type="tns:NHANVIEN" />
-          <s:element minOccurs="0" maxOccurs="1" name="CHITIETXE" type="tns:CHITIETXE" />
-        </s:sequence>
-      </s:complexType>
       <s:element name="DanhSachKhoXe">
         <s:complexType />
       </s:element>
